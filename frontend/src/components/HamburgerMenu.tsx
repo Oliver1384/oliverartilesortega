@@ -2,8 +2,13 @@ import { AppBar, Drawer, IconButton, Toolbar, Box } from '@mui/material'
 import { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
 import { makeStyles } from '@mui/styles'
-import { PRIMARY_COLORS } from '../colors'
 import Button from '@mui/material/Button'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemText from '@mui/material/ListItemText'
+
+import { PRIMARY_COLORS } from '../colors'
 
 const useStyles = makeStyles({
   navbar: {
@@ -26,6 +31,9 @@ const useStyles = makeStyles({
       '@media(max-width:790px)': {
         display: 'block !important'
       }
+    },
+    '&.MuiIconButton-root:focus': {
+      outline: '0px auto -webkit-focus-ring-color'
     }
   },
   button: {
@@ -37,6 +45,11 @@ const useStyles = makeStyles({
       backgroundColor: PRIMARY_COLORS.element,
       color: 'white'
     }
+  },
+  drawer: {
+    backgroundColor: PRIMARY_COLORS.pageBackground,
+    color: PRIMARY_COLORS.section,
+    minHeight: '100%'
   }
 })
 
@@ -72,17 +85,18 @@ export const HamburgerMenu = () => {
         </div>
         <Drawer
           anchor={'right'}
-          variant={'temporary'} //if and how easily the drawer can be closed
+          variant={'temporary'}
           open={isDrawerOpen}
-          onClose={() => setIsDrawerOpen(false)}
-          //onOpen={() => setIsDrawerOpen(true)} function that is called when the drawer should open
-        >
-          <Box>{/* The inside of the drawer */}</Box>
-          <button>Biografía</button>
-          <button>Tecnologías</button>
-          <button>Proyectos</button>
-          <button>Herramientas</button>
-          <button>Contacto</button>
+          onClose={() => setIsDrawerOpen(false)}>
+          <List className={classes.drawer}>
+            {['Biografía', 'Tecnologías', 'Proyectos', 'Herramientas', 'Contacto'].map((text) => (
+              <ListItem key={text} disablePadding>
+                <ListItemButton>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
         </Drawer>
       </Toolbar>
     </AppBar>
