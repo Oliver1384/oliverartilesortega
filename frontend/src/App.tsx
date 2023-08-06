@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     maxWidth: '1240px',
     paddingLeft: '1rem',
     paddingRight: '1rem',
-    backgroundColor: PRIMARY_COLORS.element
+    backgroundColor: PRIMARY_COLORS.pageBackground
   }
 })
 
