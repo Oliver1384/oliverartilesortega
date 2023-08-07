@@ -1,12 +1,18 @@
-import { AppBar, Drawer, IconButton, Toolbar, Box } from '@mui/material'
 import { useState } from 'react'
-import MenuIcon from '@mui/icons-material/Menu'
 import { makeStyles } from '@mui/styles'
-import Button from '@mui/material/Button'
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemButton from '@mui/material/ListItemButton'
-import ListItemText from '@mui/material/ListItemText'
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
+import {
+  AppBar,
+  Drawer,
+  IconButton,
+  Toolbar,
+  ListItemText,
+  ListItemButton,
+  ListItem,
+  List,
+  Button
+} from '@mui/material'
 
 import { PRIMARY_COLORS } from '../colors'
 
@@ -49,7 +55,18 @@ const useStyles = makeStyles({
   drawer: {
     backgroundColor: PRIMARY_COLORS.pageBackground,
     color: PRIMARY_COLORS.section,
-    minHeight: '100%'
+    minHeight: '100%',
+    '&.MuiList-root': {
+      padding: '0px'
+    }
+  },
+  closeButton: {
+    '&.MuiIconButton-root': {
+      float: 'right'
+    },
+    '&.MuiIconButton-root:focus': {
+      outline: '0px'
+    }
   }
 })
 
@@ -89,6 +106,9 @@ export const HamburgerMenu = () => {
           open={isDrawerOpen}
           onClose={() => setIsDrawerOpen(false)}>
           <List className={classes.drawer}>
+            <IconButton className={classes.closeButton} onClick={() => setIsDrawerOpen(false)}>
+              <CloseIcon />
+            </IconButton>
             {['Biografía', 'Tecnologías', 'Proyectos', 'Herramientas', 'Contacto'].map((text) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton>
