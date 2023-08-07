@@ -14,13 +14,15 @@ import {
   Button
 } from '@mui/material'
 
-import { PRIMARY_COLORS } from '../colors'
+import { PRIMARY_COLORS } from '../../colors'
+import { PageState } from '../../App'
 
 const useStyles = makeStyles({
   navbar: {
-    minWidth: '100%',
     display: 'flex',
     justifyContent: 'space-around',
+    width: '100%',
+    minWidth: '790px',
     backgroundColor: PRIMARY_COLORS.section,
     '@media(max-width:790px)': {
       display: 'none'
@@ -70,7 +72,19 @@ const useStyles = makeStyles({
   }
 })
 
-export const HamburgerMenu = () => {
+const mobileNavbar = new Map([
+  ['Biografía', PageState.Biography],
+  ['Tecnologías', PageState.Technologies],
+  ['Proyectos', PageState.Projects],
+  ['Herramientas', PageState.Tools],
+  ['Contacto', PageState.Contact]
+])
+
+interface Props {
+  onPageState: (state: PageState) => void
+}
+
+export const HamburgerMenu = ({ onPageState }: Props) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false)
   const classes = useStyles()
 
@@ -84,19 +98,34 @@ export const HamburgerMenu = () => {
           <MenuIcon />
         </IconButton>
         <div className={classes.navbar}>
-          <Button variant="contained" className={classes.button}>
+          <Button
+            variant="contained"
+            className={classes.button}
+            onClick={() => onPageState(PageState.Biography)}>
             Biografía
           </Button>
-          <Button variant="contained" className={classes.button}>
+          <Button
+            variant="contained"
+            className={classes.button}
+            onClick={() => onPageState(PageState.Technologies)}>
             Tecnologías
           </Button>
-          <Button variant="contained" className={classes.button}>
+          <Button
+            variant="contained"
+            className={classes.button}
+            onClick={() => onPageState(PageState.Projects)}>
             Proyectos
           </Button>
-          <Button variant="contained" className={classes.button}>
+          <Button
+            variant="contained"
+            className={classes.button}
+            onClick={() => onPageState(PageState.Tools)}>
             Herramientas
           </Button>
-          <Button variant="contained" className={classes.button}>
+          <Button
+            variant="contained"
+            className={classes.button}
+            onClick={() => onPageState(PageState.Tools)}>
             Contacto
           </Button>
         </div>
@@ -109,8 +138,8 @@ export const HamburgerMenu = () => {
             <IconButton className={classes.closeButton} onClick={() => setIsDrawerOpen(false)}>
               <CloseIcon />
             </IconButton>
-            {['Biografía', 'Tecnologías', 'Proyectos', 'Herramientas', 'Contacto'].map((text) => (
-              <ListItem key={text} disablePadding>
+            {Array.from(mobileNavbar).map(([text, state]) => (
+              <ListItem key={text} disablePadding onClick={() => onPageState(state)}>
                 <ListItemButton>
                   <ListItemText primary={text} />
                 </ListItemButton>

@@ -1,7 +1,12 @@
 import { PRIMARY_COLORS } from './colors'
 import { Biography } from './components/Biography'
 import { makeStyles } from '@mui/styles'
-import { HamburgerMenu } from './components/HamburgerMenu'
+import { HamburgerMenu } from './components/ui/HamburgerMenu'
+import { useState } from 'react'
+import { Contact } from './components/Contact'
+import { Projects } from './components/Projects'
+import { Technologies } from './components/Technologies'
+import { Tools } from './components/Tools'
 
 const useStyles = makeStyles({
   page: {
@@ -15,15 +20,29 @@ const useStyles = makeStyles({
   }
 })
 
+export enum PageState {
+  Biography,
+  Contact,
+  Projects,
+  Technologies,
+  Tools
+}
+
 export const App = () => {
   const classes = useStyles()
+  const [pageState, setPageState] = useState<PageState>(PageState.Projects)
+
   return (
     <>
       <header>
-        <HamburgerMenu />
+        <HamburgerMenu onPageState={setPageState}/>
       </header>
       <body className={classes.page}>
-        <Biography />
+        {pageState === PageState.Biography && <Biography />}
+        {pageState === PageState.Contact && <Contact />}
+        {pageState === PageState.Projects && <Projects />}
+        {pageState === PageState.Technologies && <Technologies />}
+        {pageState === PageState.Tools && <Tools />}
       </body>
       <footer></footer>
     </>
