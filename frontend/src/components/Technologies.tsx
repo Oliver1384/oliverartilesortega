@@ -1,5 +1,9 @@
 import { makeStyles } from '@mui/styles'
-import { PRIMARY_COLORS, TEXT_COLORS } from "../colors"
+import { PRIMARY_COLORS, TEXT_COLORS } from '../colors'
+import reactLogo from '../assets/react-logo.png'
+import rustLogo from '../assets/rust-logo.png'
+import typescriptLogo from '../assets/typescript-logo.png'
+import { Article } from './ui/Article'
 
 const useStyles = makeStyles({
   section: {
@@ -11,11 +15,16 @@ const useStyles = makeStyles({
 })
 
 export const Technologies = () => {
-  const classes = useStyles() 
+  const classes = useStyles()
   return (
     <>
       <section className={classes.section}>
-        
+        <Article
+          text={'He trabajado mucho con react, realizandonumerosos proyectos'}
+          image={reactLogo}
+        />
+        <Article text={''} image={rustLogo} />
+        <Article text={''} image={typescriptLogo} />
       </section>
     </>
   )

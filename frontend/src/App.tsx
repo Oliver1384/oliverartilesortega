@@ -14,10 +14,17 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    maxWidth: '1240px',
-    paddingLeft: '1rem',
-    paddingRight: '1rem',
-    backgroundColor: PRIMARY_COLORS.pageBackground
+    width: '1240px',
+    backgroundColor: PRIMARY_COLORS.pageBackground,
+    '@media(max-width:1240px)': {
+      width: '100vw'
+    }
+  },
+  header: {
+    width: '1240px',
+    '@media(max-width:1240px)': {
+      width: '100vw'
+    },
   }
 })
 
@@ -27,8 +34,8 @@ export const App = () => {
 
   return (
     <>
-      <header>
-        <HamburgerMenu onPageState={setPageState}/>
+      <header className={classes.header}>
+        <HamburgerMenu onPageState={setPageState} />
       </header>
       <body className={classes.page}>
         {pageState === PageState.Biography && <Biography />}
