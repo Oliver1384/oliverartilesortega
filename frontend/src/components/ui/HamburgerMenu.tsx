@@ -15,7 +15,7 @@ import {
 } from '@mui/material'
 
 import { PRIMARY_COLORS } from '../../colors'
-import { PageState } from '../../App'
+import { PageState } from '../types'
 
 const useStyles = makeStyles({
   navbar: {

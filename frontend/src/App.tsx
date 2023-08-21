@@ -7,6 +7,7 @@ import { Contact } from './components/Contact'
 import { Projects } from './components/Projects'
 import { Technologies } from './components/Technologies'
 import { Tools } from './components/Tools'
+import { PageState } from './components/types'
 
 const useStyles = makeStyles({
   page: {
@@ -19,14 +20,6 @@ const useStyles = makeStyles({
     backgroundColor: PRIMARY_COLORS.pageBackground
   }
 })
-
-export enum PageState {
-  Biography,
-  Contact,
-  Projects,
-  Technologies,
-  Tools
-}
 
 export const App = () => {
   const classes = useStyles()
