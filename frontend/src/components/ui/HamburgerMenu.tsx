@@ -23,6 +23,7 @@ const useStyles = makeStyles({
     justifyContent: 'space-around',
     width: '100%',
     minWidth: '790px',
+    fontFamily: 'GeistMonoBold',
     backgroundColor: PRIMARY_COLORS.section,
     '@media(max-width:790px)': {
       display: 'none'
@@ -73,7 +74,7 @@ const useStyles = makeStyles({
 })
 
 const mobileNavbar = new Map([
-  ['Biografía', PageState.Biography],
+  ['Sobre mí', PageState.Biography],
   ['Tecnologías', PageState.Technologies],
   ['Proyectos', PageState.Projects],
   ['Herramientas', PageState.Tools],
@@ -102,7 +103,7 @@ export const HamburgerMenu = ({ onPageState }: Props) => {
             variant="contained"
             className={classes.button}
             onClick={() => onPageState(PageState.Biography)}>
-            Biografía
+            Sobre mí
           </Button>
           <Button
             variant="contained"

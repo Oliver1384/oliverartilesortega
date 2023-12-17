@@ -12,8 +12,7 @@ const useStyles = makeStyles({
   title: {
     fontFamily: 'GeistMonoBold'
   },
-  content: {
-  }
+  content: {}
 })
 
 export const Biography = () => {
@@ -22,11 +21,14 @@ export const Biography = () => {
   return (
     <section className={classes.section}>
       <h1 className={classes.title}>Oliver Artiles</h1>
-      <p className={classes.content}>
-        Programador full stack.
-      </p>
+      <h2 className={classes.content}>Programador full stack.</h2>
       <p>
-        
+        Busco trabajar en proyectos que me supongan un reto y continuar mejorando como profesional,
+        me gusta probar nuevas tecnologías.
+      <p>
+        Valoro mucho el trabajo en equipo, gracias a los compañeros de los diferentes grupos en los
+        que he trabajado aprendí más rápido, tanto al ayudarme como al enseñar a otros.
+      </p>
       </p>
     </section>
   )
