@@ -13,7 +13,6 @@ const useStyles = makeStyles({
   page: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
     width: '1240px',
     backgroundColor: PRIMARY_COLORS.pageBackground,
     '@media(max-width:1240px)': {
