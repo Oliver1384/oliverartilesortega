@@ -1,6 +1,6 @@
 import { PRIMARY_COLORS } from './colors'
 import { Biography } from './components/Biography'
-import { makeStyles } from '@mui/styles'
+import { styled } from '@mui/system'
 import { HamburgerMenu } from './components/ui/HamburgerMenu'
 import { useState } from 'react'
 import { Contact } from './components/Contact'
@@ -9,40 +9,39 @@ import { Technologies } from './components/Technologies'
 import { Tools } from './components/Tools'
 import { PageState } from './components/types'
 
-const useStyles = makeStyles({
-  page: {
-    display: 'flex',
-    justifyContent: 'center',
-    width: '1240px',
-    backgroundColor: PRIMARY_COLORS.pageBackground,
-    '@media(max-width:1240px)': {
-      width: '100vw'
-    }
-  },
-  header: {
-    width: '1240px',
-    '@media(max-width:1240px)': {
-      width: '100vw'
-    },
+
+const Page = styled('body')({
+  display: 'flex',
+  justifyContent: 'center',
+  width: '1240px',
+  backgroundColor: PRIMARY_COLORS.pageBackground,
+  '@media(max-width:1240px)': {
+    width: '100vw'
+  }
+})
+
+const Header = styled('header')({
+  width: '1240px',
+  '@media(max-width:1240px)': {
+    width: '100vw'
   }
 })
 
 export const App = () => {
-  const classes = useStyles()
   const [pageState, setPageState] = useState<PageState>(PageState.Projects)
 
   return (
     <>
-      <header className={classes.header}>
+      <Header>
         <HamburgerMenu onPageState={setPageState} />
-      </header>
-      <body className={classes.page}>
+      </Header>
+      <Page>
         {pageState === PageState.Biography && <Biography />}
         {pageState === PageState.Contact && <Contact />}
         {pageState === PageState.Projects && <Projects />}
         {pageState === PageState.Technologies && <Technologies />}
         {pageState === PageState.Tools && <Tools />}
-      </body>
+      </Page>
       <footer></footer>
     </>
   )

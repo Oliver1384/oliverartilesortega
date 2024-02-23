@@ -79,3 +79,8 @@
     font-family: 'GeistMonoBold';
     src: local('GeistMonoBold'), url(./fonts/Geist.Mono/GeistMono-Bold.otf) format('truetype');
   }
+
+  @font-face {
+    font-family: 'GeistMonoSemiBold';
+    src: local('GeistMonoSemiBold'), url(./fonts/Geist.Mono/GeistMono-SemiBold.otf) format('truetype');
+  }

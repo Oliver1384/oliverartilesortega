@@ -1,35 +1,41 @@
-import { makeStyles } from '@mui/styles'
 import { PRIMARY_COLORS, TEXT_COLORS } from '../colors'
+import { styled } from '@mui/system';
 
-const useStyles = makeStyles({
-  section: {
-    backgroundColor: PRIMARY_COLORS.section,
-    color: TEXT_COLORS.primary,
-    padding: '1rem',
-    margin: '1rem',
-    height: 'fit-content'
-  },
-  title: {
-    fontFamily: 'GeistMonoBold'
-  },
-  content: {}
+const Section = styled('section')({
+  backgroundColor: PRIMARY_COLORS.section,
+  color: TEXT_COLORS.primary,
+  padding: '1rem',
+  margin: '1rem',
+  height: 'fit-content',
+  fontSize: '18px',
+  fontWeight: '400',
+  fontFamily: 'GeistMonoRegular'
+})
+
+const Title = styled('h1')({
+    fontFamily: 'GeistMonoBold',
+    fontSize: '24px'
+})
+
+const Description = styled('h2')({
+    fontSize: '18px',
+    fontFamily: 'GeistMonoSemiBold'
 })
 
 export const Biography = () => {
-  const classes = useStyles()
 
   return (
-    <section className={classes.section}>
-      <h1 className={classes.title}>Oliver Artiles</h1>
-      <h2 className={classes.content}>Programador full stack.</h2>
+    <Section>
+      <Title>Oliver Artiles</Title>
+      <Description>Programador full stack.</Description>
       <p>
         Busco trabajar en proyectos que me supongan un reto y continuar mejorando como profesional,
         me gusta probar nuevas tecnologías.
+      </p>
       <p>
         Valoro mucho el trabajo en equipo, gracias a los compañeros de los diferentes grupos en los
         que he trabajado aprendí más rápido, tanto al ayudarme como al enseñar a otros.
       </p>
-      </p>
-    </section>
+    </Section>
   )
 }
