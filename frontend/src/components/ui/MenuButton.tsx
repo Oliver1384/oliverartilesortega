@@ -6,7 +6,7 @@ interface MenuButtonProps {
   onClick: () => void
 }
 
-export const MenuButton = ({text, onClick}: MenuButtonProps) => {
+export const MenuButton = ({ text, onClick }: MenuButtonProps) => {
   return (
     <Button variant={'contained'} sx={{
       '&.MuiButton-root': {
@@ -16,9 +16,10 @@ export const MenuButton = ({text, onClick}: MenuButtonProps) => {
       '&.MuiButton-root:hover': {
         backgroundColor: PRIMARY_COLORS.element,
         color: 'white'
-      }
+      },
+      fontFamily: 'GeistMonoSemiBold'
     }}
-    onClick={onClick}>
+      onClick={onClick}>
       {text}
     </Button>
   )

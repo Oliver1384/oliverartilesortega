@@ -99,7 +99,12 @@ export const HamburgerMenu = ({ onPageState }: Props) => {
             {Array.from(mobileNavbar).map(([text, state]) => (
               <ListItem key={text} disablePadding onClick={() => onPageState(state)}>
                 <ListItemButton>
-                  <ListItemText primary={text} />
+                  <ListItemText sx={{
+                    '& > span.MuiTypography-root': {
+                      fontFamily: 'GeistMonoSemiBold'
+                    }
+                  }}
+                    primary={text} />
                 </ListItemButton>
               </ListItem>
             ))}
