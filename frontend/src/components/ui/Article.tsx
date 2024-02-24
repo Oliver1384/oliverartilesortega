@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { PRIMARY_COLORS, TEXT_COLORS } from '../../colors'
 import { styled } from '@mui/system'
+import { Title } from './Title'
 
 interface ArticleProps {
   children: ReactNode
@@ -15,11 +16,6 @@ const ArticleStyled = styled('article')({
   padding: '1rem',
   paddingBottom: '2rem',
   borderRadius: '5px'
-})
-
-const Title = styled('h1')({
-  fontFamily: 'GeistMonoBold',
-  fontSize: '24px'
 })
 
 const Image = styled('img')({

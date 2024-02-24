@@ -1,5 +1,7 @@
-import { PRIMARY_COLORS, TEXT_COLORS } from '../colors'
 import { styled } from '@mui/system';
+
+import { Title } from './ui/Title';
+import { PRIMARY_COLORS, TEXT_COLORS } from '../colors'
 
 const Section = styled('section')({
   backgroundColor: PRIMARY_COLORS.section,
@@ -12,10 +14,6 @@ const Section = styled('section')({
   fontFamily: 'GeistMonoRegular'
 })
 
-const Title = styled('h1')({
-    fontFamily: 'GeistMonoBold',
-    fontSize: '24px'
-})
 
 const Description = styled('h2')({
     fontSize: '18px',
