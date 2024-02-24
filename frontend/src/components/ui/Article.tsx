@@ -10,21 +10,24 @@ interface ArticleProps {
 }
 
 const ArticleStyled = styled('article')({
-  margin: '1rem',
   backgroundColor: PRIMARY_COLORS.section,
   color: TEXT_COLORS.primary,
   padding: '1rem',
   paddingBottom: '2rem',
-  borderRadius: '5px'
+  margin: '0.5rem',
+  borderRadius: '5px',
+  '@media(min-width:500px)': {
+    margin: '1rem',
+  }
 })
 
 const Image = styled('img')({
   maxWidth: '85px',
-    maxHeight: '85px',
-    backgroundColor: 'white',
-    borderRadius: '5px',
-    float: 'left',
-    margin: '1rem 1rem 0 0'
+  maxHeight: '85px',
+  backgroundColor: 'white',
+  borderRadius: '5px',
+  float: 'left',
+  margin: '1rem 1rem 0 0'
 })
 
 export const Article = ({ children, image, title }: ArticleProps) => {
@@ -32,7 +35,7 @@ export const Article = ({ children, image, title }: ArticleProps) => {
   return (
     <ArticleStyled>
       <Title>{title}</Title>
-      <Image src={image} alt={'Logo de rust'}/>
+      <Image src={image} alt={'Logo de rust'} />
       <div>{children}</div>
     </ArticleStyled>
   )
