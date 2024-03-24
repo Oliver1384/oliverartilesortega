@@ -26,17 +26,47 @@ const Image = styled('img')({
   maxHeight: '85px',
   backgroundColor: 'white',
   borderRadius: '5px',
+  marginRight: '0.5rem',
   float: 'left',
-  margin: '1rem 1rem 0 0'
+  width: '25px',
+  height: '25px',
+  display: 'inline',
+  '@media(min-width:500px)': {
+    marginRight: '1.7rem',
+    display: 'column',
+    width: 'auto',
+    height: 'auto',
+  }
+})
+
+const ArticleHeader = styled('div')({
+  '@media(min-width: 500px)': {
+    display: 'flex',
+    flexDirection: 'column-reverse',
+    float: 'left'
+  },
+})
+
+const ArticleBody = styled('div')({
+  '@media(min-width: 500px)': {
+    marginTop: '2.2rem'
+  }
 })
 
 export const Article = ({ children, image, title }: ArticleProps) => {
 
   return (
     <ArticleStyled>
-      <Title>{title}</Title>
-      <Image src={image} alt={'Logo de rust'} />
-      <div>{children}</div>
+      <ArticleHeader>
+        <Image src={image} alt={'Logo de rust'} />
+        <Title sx={{
+          '@media(min-width:500px)': {
+            margin: '0',
+            marginBottom: '0.8rem'
+          }
+        }}>{title}</Title>
+      </ArticleHeader>
+      <ArticleBody>{children}</ArticleBody>
     </ArticleStyled>
   )
 }

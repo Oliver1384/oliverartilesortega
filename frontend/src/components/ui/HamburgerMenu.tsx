@@ -39,10 +39,11 @@ const mobileNavbar = new Map([
 ])
 
 interface Props {
-  onPageState: (state: PageState) => void
+  onChangePageState: (state: PageState) => void
+  pageState: PageState
 }
 
-export const HamburgerMenu = ({ onPageState }: Props) => {
+export const HamburgerMenu = ({ onChangePageState, pageState }: Props) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false)
 
   return (
@@ -67,11 +68,26 @@ export const HamburgerMenu = ({ onPageState }: Props) => {
           <MenuIcon />
         </IconButton>
         <NavBar>
-          <MenuButton onClick={() => onPageState(PageState.Biography)} text={'Sobre mí'} />
-          <MenuButton onClick={() => onPageState(PageState.Technologies)} text={'Tecnologías'} />
-          <MenuButton onClick={() => onPageState(PageState.Projects)} text={'Proyectos'} />
-          <MenuButton onClick={() => onPageState(PageState.Tools)} text={'Herramientas'} />
-          <MenuButton onClick={() => onPageState(PageState.Contact)} text={'Contacto'} />
+          <MenuButton
+            isSelected={pageState === PageState.Biography}
+            onClick={() => onChangePageState(PageState.Biography)}
+            text={'Sobre mí'} />
+          <MenuButton
+            isSelected={pageState === PageState.Technologies}
+            onClick={() => onChangePageState(PageState.Technologies)}
+            text={'Tecnologías'} />
+          <MenuButton
+            isSelected={pageState === PageState.Projects}
+            onClick={() => onChangePageState(PageState.Projects)}
+            text={'Proyectos'} />
+          <MenuButton
+            isSelected={pageState === PageState.Tools}
+            onClick={() => onChangePageState(PageState.Tools)}
+            text={'Herramientas'} />
+          <MenuButton
+            isSelected={pageState === PageState.Contact}
+            onClick={() => onChangePageState(PageState.Contact)}
+            text={'Contacto'} />
         </NavBar>
         <Drawer
           anchor={'right'}
@@ -97,12 +113,13 @@ export const HamburgerMenu = ({ onPageState }: Props) => {
               <CloseIcon />
             </IconButton>
             {Array.from(mobileNavbar).map(([text, state]) => (
-              <ListItem key={text} disablePadding onClick={() => onPageState(state)}>
+              <ListItem key={text} disablePadding onClick={() => onChangePageState(state)}>
                 <ListItemButton>
                   <ListItemText sx={{
                     '& > span.MuiTypography-root': {
-                      fontFamily: 'GeistMonoSemiBold'
-                    }
+                      fontFamily: state === pageState ? 'GeistMonoBold' : 'GeistMonoSemiBold'
+                    },
+                    textDecoration: state === pageState ? 'underline' : 'none'
                   }}
                     primary={text} />
                 </ListItemButton>

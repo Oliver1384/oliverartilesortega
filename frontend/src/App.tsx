@@ -33,7 +33,7 @@ export const App = () => {
   return (
     <>
       <Header>
-        <HamburgerMenu onPageState={setPageState} />
+        <HamburgerMenu onChangePageState={setPageState} pageState={pageState}/>
       </Header>
       <Page>
         {pageState === PageState.Biography && <Biography />}
