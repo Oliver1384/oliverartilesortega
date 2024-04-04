@@ -5,7 +5,7 @@ import { Article } from './ui/Article'
 import { TEXT_COLORS } from '../colors'
 import { styled } from '@mui/system'
 
-const Section = styled('section')({
+export const Section = styled('section')({
   color: TEXT_COLORS.primary,
   height: 'fit-content',
   fontSize: '18px',

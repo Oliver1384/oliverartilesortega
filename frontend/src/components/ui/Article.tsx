@@ -5,7 +5,7 @@ import { Title } from './Title'
 
 interface ArticleProps {
   children: ReactNode
-  image: string
+  image?: string
   title: string
 }
 
@@ -49,7 +49,7 @@ const ArticleHeader = styled('div')({
 
 const ArticleBody = styled('div')({
   '@media(min-width: 500px)': {
-    marginTop: '2.2rem'
+    marginTop: '40px'
   }
 })
 
@@ -58,7 +58,9 @@ export const Article = ({ children, image, title }: ArticleProps) => {
   return (
     <ArticleStyled>
       <ArticleHeader>
-        <Image src={image} alt={'Logo de rust'} />
+        {
+          image && <Image src={image} alt={'Logo de rust'} />
+        }
         <Title sx={{
           '@media(min-width:500px)': {
             margin: '0',
