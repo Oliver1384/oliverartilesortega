@@ -11,7 +11,12 @@ const Section = styled('section')({
   height: 'fit-content',
   fontSize: '18px',
   fontWeight: '400',
-  fontFamily: 'GeistMonoRegular'
+  fontFamily: 'GeistMonoRegular',
+  display: 'flex',
+  flexDirection: 'column',
+  '@media(min-width: 790px)': {
+    display: 'block'
+  }
 })
 
 
@@ -20,10 +25,23 @@ const Description = styled('h2')({
     fontFamily: 'GeistMonoSemiBold'
 })
 
+const ProfileImage = styled('img')({
+  borderRadius: '50%',
+  maxWidth: '250px',
+  order: '1',
+  margin: '0 auto',
+  '@media(min-width:790px)': {
+    float: 'right',
+    margin: '8px',
+    order: 'inherit' 
+  }
+})
+
 export const Biography = () => {
 
   return (
     <Section>
+      <ProfileImage src={'profile.jpg'}/>
       <Title>Oliver Artiles</Title>
       <Description>Programador full stack.</Description>
       <p>
