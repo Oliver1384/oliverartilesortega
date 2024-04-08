@@ -2,20 +2,8 @@ import reactLogo from '../assets/react-logo.png'
 import rustLogo from '../assets/rust-logo.png'
 import typescriptLogo from '../assets/typescript-logo.png'
 import { Article } from './ui/Article'
-import { TEXT_COLORS } from '../colors'
-import { styled } from '@mui/system'
+import { Section } from './ui/Section'
 
-export const Section = styled('section')({
-  color: TEXT_COLORS.primary,
-  height: 'fit-content',
-  fontSize: '18px',
-  fontWeight: '400',
-  marginTop: '1rem',
-  fontFamily: 'GeistMonoRegular',
-  '@media(min-width: 1024px)': {
-    margin: '2rem',
-  }
-})
 
 export const Technologies = () => {
   return (

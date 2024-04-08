@@ -1,5 +1,5 @@
 import { Article } from './ui/Article'
-import { Section } from './Technologies'
+import { Section } from './ui/Section'
 
 export const Projects = () => {
   return (
