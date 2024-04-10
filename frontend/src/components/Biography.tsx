@@ -19,7 +19,6 @@ const Section = styled('section')({
   }
 })
 
-
 const Description = styled('h2')({
     fontSize: '18px',
     fontFamily: 'GeistMonoSemiBold'
@@ -51,6 +50,12 @@ export const Biography = () => {
       <p>
         Valoro mucho el trabajo en equipo, gracias a los compañeros de los diferentes grupos en los
         que he trabajado aprendí más rápido, tanto al ayudarme como al enseñar a otros.
+      </p>
+      <p>
+        Descubrí la programación el primer año de carrera en telecomunicaciones, con java y python. 
+        Me cambié a un ciclo superior de Desarrollo de aplicaciones web, donde asenté mis conocimientos
+        previos orientados a mi profesión actual. 
+        Me considero autodidacta y disfruto programando.
       </p>
     </Section>
   )
