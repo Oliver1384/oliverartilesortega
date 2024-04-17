@@ -35,7 +35,6 @@ const mobileNavbar = new Map([
   ['Tecnologías', PageState.Technologies],
   ['Proyectos', PageState.Projects],
   ['Herramientas', PageState.Tools],
-  ['Contacto', PageState.Contact]
 ])
 
 interface Props {
@@ -84,10 +83,6 @@ export const HamburgerMenu = ({ onChangePageState, pageState }: Props) => {
             isSelected={pageState === PageState.Tools}
             onClick={() => onChangePageState(PageState.Tools)}
             text={'Herramientas'} />
-          <MenuButton
-            isSelected={pageState === PageState.Contact}
-            onClick={() => onChangePageState(PageState.Contact)}
-            text={'Contacto'} />
         </NavBar>
         <Drawer
           anchor={'right'}

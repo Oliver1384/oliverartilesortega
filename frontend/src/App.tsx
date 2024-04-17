@@ -3,7 +3,6 @@ import { Biography } from './components/Biography'
 import { styled } from '@mui/system'
 import { HamburgerMenu } from './components/ui/HamburgerMenu'
 import { useState } from 'react'
-import { Contact } from './components/Contact'
 import { Projects } from './components/Projects'
 import { Technologies } from './components/Technologies'
 import { Tools } from './components/Tools'
@@ -37,7 +36,6 @@ export const App = () => {
       </Header>
       <Page>
         {pageState === PageState.Biography && <Biography />}
-        {pageState === PageState.Contact && <Contact />}
         {pageState === PageState.Projects && <Projects />}
         {pageState === PageState.Technologies && <Technologies />}
         {pageState === PageState.Tools && <Tools />}
