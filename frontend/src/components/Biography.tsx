@@ -1,29 +1,49 @@
-import { makeStyles } from '@mui/styles'
-import { PRIMARY_COLORS, TEXT_COLORS } from "../colors"
+import { styled } from '@mui/system';
 
-const useStyles = makeStyles({
-  section: {
-    backgroundColor: PRIMARY_COLORS.section,
-    color: TEXT_COLORS.primary,
-    padding: '2rem',
-    borderRadius: '5px'
-  },
-});
+import { Contact } from './Contact';
+import { Section } from './ui/Section';
+import { Article } from './ui/Article';
+
+const Description = styled('h2')({
+  fontSize: '18px',
+  fontFamily: 'GeistMonoSemiBold'
+})
+
+const ProfileImage = styled('img')({
+  borderRadius: '50%',
+  maxWidth: '250px',
+  order: '1',
+  margin: '0 auto',
+  '@media(min-width:790px)': {
+    float: 'right',
+    margin: '8px',
+    order: 'inherit'
+  }
+})
 
 export const Biography = () => {
-  const classes = useStyles() 
 
   return (
-    <section className={classes.section}>
-      <h1>Biografía</h1>
-      <p>
-        Descubrí la programación en la univercidad, en una carrera que no
-        terminé. Estuve un año aprendiendo por mi cuenta y decidí realizar el
-        ciclo superior de aplicaciones web que terminé en 2022. Realize
-        prácticas en empresa durante 3 meses en "Secret Source" y posterior
-        mente me contrataron en la empresa que me encuentro actualmente
-        "Contactel", el 14 de Junio de 2022.
-      </p>
-    </section>
-  );
-};
+    <Section>
+      <Article title={'Oliver Artiles'}>
+        <ProfileImage src={'profile.jpg'} />
+        <Description>Programador full stack.</Description>
+        <p>
+          Busco trabajar en proyectos que me supongan un reto y continuar mejorando como profesional,
+          me gusta probar nuevas tecnologías.
+        </p>
+        <p>
+          Valoro mucho el trabajo en equipo, gracias a los compañeros de los diferentes grupos en los
+          que he trabajado aprendí más rápido, tanto al ayudarme como al enseñar a otros.
+        </p>
+        <p>
+          Descubrí la programación el primer año de carrera en telecomunicaciones, con java y python.
+          Me cambié a un ciclo superior de Desarrollo de aplicaciones web, donde asenté mis conocimientos
+          previos orientados a mi profesión actual.
+          Me considero autodidacta y disfruto programando.
+        </p>
+      </Article>
+      <Contact />
+    </Section>
+  )
+}
