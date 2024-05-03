@@ -1,13 +1,10 @@
-import { styled } from '@mui/system';
+import { styled } from '@mui/system'
 
-import { Contact } from './Contact';
-import { Section } from './ui/Section';
-import { Article } from './ui/Article';
+import { Contact } from './Contact'
+import { Section } from './ui/Section'
+import { Article } from './ui/Article'
+import {SecondaryTitle} from './ui/SecondaryTitle'
 
-const Description = styled('h2')({
-  fontSize: '18px',
-  fontFamily: 'GeistMonoSemiBold'
-})
 
 const ProfileImage = styled('img')({
   borderRadius: '50%',
@@ -27,7 +24,7 @@ export const Biography = () => {
     <Section>
       <Article title={'Oliver Artiles'}>
         <ProfileImage src={'profile.jpg'} />
-        <Description>Programador full stack.</Description>
+        <SecondaryTitle>Programador full stack.</SecondaryTitle>
         <p>
           Busco trabajar en proyectos que me supongan un reto y continuar mejorando como profesional,
           me gusta probar nuevas tecnologías.

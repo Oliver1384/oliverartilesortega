@@ -1,5 +1,6 @@
-import { Article } from "./ui/Article"
-import { Section } from "./ui/Section"
+import { Article } from './ui/Article'
+import { Section } from './ui/Section'
+import { Resources} from './Resources'
 
 export const Tools = () => {
   return (
@@ -55,7 +56,7 @@ export const Tools = () => {
           A la hora de aprender prefiero leer a ver videos, me resulta más cómodo, es por ello que una buena parte de lo que
           conozco proviene de algún libro o de la documentación de alguna tecnología.
         </p>
-
+        <Resources/>
       </Article>
     </Section>
   )
