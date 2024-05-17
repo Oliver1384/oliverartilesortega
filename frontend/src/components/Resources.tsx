@@ -38,6 +38,15 @@ const CloseButton = styled('div')({
   right: '8%'
 })
 
+const LinksContainer = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  '@media(min-width:500px)': {
+    display: 'inline-block'
+  }
+})
+
 export const Resources = () => {
   const [open, setOpen] = useState(false)
   const handleClose = () => setOpen(false)
@@ -80,7 +89,7 @@ export const Resources = () => {
             <img style={{ maxHeight: '90vh', maxWidth: '90%' }} src={currentBook} />
           </div>
         </Modal >
-        <div style={{ display: 'inline-block' }}>
+        <LinksContainer>
           <SecondaryTitle>Documentaciones</SecondaryTitle>
           <Link href={'https://es.react.dev/reference/react'} target={'_blank'}>
             React Reference Overview
@@ -99,9 +108,9 @@ export const Resources = () => {
           </Link>
           <br />
           <Link href={'https://developers.google.com/search/docs'} target={'_blank'} >
-            Google Search documentation
+            Google Search Documentation
           </Link>
-        </div>
+        </LinksContainer >
       </div>
     </>
   )
