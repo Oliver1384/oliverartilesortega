@@ -32,7 +32,8 @@ const Image = styled('img')({
   height: '25px',
   display: 'inline',
   '@media(min-width:500px)': {
-    marginRight: '1.7rem',
+    marginRight: '1.4rem',
+    marginTop: '6px',
     display: 'column',
     width: 'auto',
     height: 'auto',
@@ -64,7 +65,9 @@ export const Article = ({ children, image, title }: ArticleProps) => {
         <Title sx={{
           '@media(min-width:500px)': {
             margin: '0',
-            marginBottom: '0.8rem'
+            marginBottom: '0.8rem',
+            maxWidth: '50px',
+            textWrap: 'nowrap'
           }
         }}>{title}</Title>
       </ArticleHeader>

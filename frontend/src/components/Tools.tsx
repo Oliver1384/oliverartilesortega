@@ -7,9 +7,9 @@ export const Tools = () => {
     <Section>
       <Article title={'Editores'}>
         <p>
-          Comencé utilizando Visual Studio Core, pero la empresa actual me proporcionó licencia de intelliJ
-          y me gustó mucho la herramienta, y es con la que más horas he trabajado. Cuando descubrí Vim y lo
-          comencé a dominar con cierta soltura, en conbinación con los editores de Jetbrains se a convertido
+          Comencé utilizando Visual Studio Core, pero después de probar intelliJ me gustó mucho
+          y es la que he utilizado la mayoría del tiempo. Cuando descubrí Vim y lo
+          comencé a dominar con cierta soltura, en combinación con los editores de Jetbrains se a convertido
           en mis herramientas para desarrollo favoritas. Para la programación en proyectos personales me gusta
           utilizar Lunar Vim.
         </p>
@@ -33,6 +33,9 @@ export const Tools = () => {
         <p>
           El control de versiones de los proyectos con Git, prefiero utilizarlo por terminal por lo que conozco los comando esenciales
           para el ciclo de desarrollo habitual.
+        </p>
+        <p>
+          Para hacer pruebas integrales de una aplicación web utilizo Selenium.
         </p>
       </Article>
 

@@ -6,7 +6,7 @@ import { ContactLink } from './ui/ContactLink.tsx'
 import linkedinLogo from '../assets/logos/linkedin-logo.png'
 import githubLogo from '../assets/logos/github-logo.png'
 import gmailLogo from '../assets/logos/gmail-logo.png'
-import codewarsLogo from '../assets/logos/codewars-log.png'
+import codewarsLogo from '../assets/logos/codewars-logo.png'
 import downloadIcon from '../assets/icons/download-icon.svg'
 import { PRIMARY_COLORS } from '../colors.ts'
 
