@@ -6,5 +6,6 @@ export const PRIMARY_COLORS = {
 };
 
 export const TEXT_COLORS = {
-  primary: "#ffffff"
+  primary: "#ffffff",
+  secondary: "#c6d2d5"
 }
