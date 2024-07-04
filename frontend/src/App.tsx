@@ -27,7 +27,7 @@ const Header = styled('header')({
 })
 
 export const App = () => {
-  const [pageState, setPageState] = useState<PageState>(PageState.Projects)
+  const [pageState, setPageState] = useState<PageState>(PageState.Biography)
 
   return (
     <>
