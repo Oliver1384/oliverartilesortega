@@ -1,8 +1,9 @@
+import { styled } from '@mui/system'
+import { useState } from 'react'
+
 import { PRIMARY_COLORS } from './colors'
 import { Biography } from './components/Biography'
-import { styled } from '@mui/system'
 import { HamburgerMenu } from './components/ui/HamburgerMenu'
-import { useState } from 'react'
 import { Projects } from './components/Projects'
 import { Technologies } from './components/Technologies'
 import { Tools } from './components/Tools'
@@ -28,11 +29,22 @@ const Header = styled('header')({
 
 export const App = () => {
   const [pageState, setPageState] = useState<PageState>(PageState.Biography)
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false)
+
+  const handlerChangePageState = (state: PageState) => {
+    setIsDrawerOpen(false)
+    setPageState(state)
+  }
 
   return (
     <>
       <Header>
-        <HamburgerMenu onChangePageState={setPageState} pageState={pageState}/>
+        <HamburgerMenu
+          onChangePageState={handlerChangePageState}
+          pageState={pageState}
+          onSetIsDrawerOpen={setIsDrawerOpen}
+          isDrawerOpen={isDrawerOpen}
+        />
       </Header>
       <Page>
         {pageState === PageState.Biography && <Biography />}
@@ -40,7 +52,6 @@ export const App = () => {
         {pageState === PageState.Technologies && <Technologies />}
         {pageState === PageState.Tools && <Tools />}
       </Page>
-      <footer></footer>
     </>
   )
 }

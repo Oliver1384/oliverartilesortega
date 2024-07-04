@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { styled } from '@mui/system'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
@@ -39,11 +38,12 @@ const mobileNavbar = new Map([
 
 interface Props {
   onChangePageState: (state: PageState) => void
+  onSetIsDrawerOpen: (value: boolean) => void
+  isDrawerOpen: boolean
   pageState: PageState
 }
 
-export const HamburgerMenu = ({ onChangePageState, pageState }: Props) => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false)
+export const HamburgerMenu = ({ onChangePageState, pageState, onSetIsDrawerOpen, isDrawerOpen }: Props) => {
 
   return (
     <AppBar position={'static'}>
@@ -63,7 +63,7 @@ export const HamburgerMenu = ({ onChangePageState, pageState }: Props) => {
             }
           }}
           edge={'start'}
-          onClick={() => setIsDrawerOpen(true)}>
+          onClick={() => onSetIsDrawerOpen(true)}>
           <MenuIcon />
         </IconButton>
         <NavBar>
@@ -88,7 +88,7 @@ export const HamburgerMenu = ({ onChangePageState, pageState }: Props) => {
           anchor={'right'}
           variant={'temporary'}
           open={isDrawerOpen}
-          onClose={() => setIsDrawerOpen(false)}>
+          onClose={() => onSetIsDrawerOpen(false)}>
           <List sx={{
             backgroundColor: PRIMARY_COLORS.pageBackground,
             color: PRIMARY_COLORS.section,
@@ -104,7 +104,7 @@ export const HamburgerMenu = ({ onChangePageState, pageState }: Props) => {
               '&.MuiIconButton-root:focus': {
                 outline: '0px'
               }
-            }} onClick={() => setIsDrawerOpen(false)}>
+            }} onClick={() => onSetIsDrawerOpen(false)}>
               <CloseIcon />
             </IconButton>
             {Array.from(mobileNavbar).map(([text, state]) => (
