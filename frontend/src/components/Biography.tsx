@@ -35,7 +35,7 @@ export const Biography = () => {
         </p>
         <p>
           Descubrí la programación el primer año de carrera en telecomunicaciones, con java y python.
-          Me cambié a un ciclo superior de Desarrollo de aplicaciones web, donde asenté mis conocimientos
+          Me cambié a un ciclo superior de desarrollo de aplicaciones web, donde asenté mis conocimientos
           previos orientados a mi profesión actual.
           Me considero autodidacta y disfruto programando.
         </p>
