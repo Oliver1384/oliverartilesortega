@@ -16,39 +16,39 @@ export const Technologies = () => {
     <Section>
       <Article image={rustLogo} title={'Rust'}>
         <p>
-          Es el lenguaje en el que más tiempo he programado para el back-end, al principio me resultó complicado
-          ya que es el primer lenguaje orientado a sistemas que estudiaba pero a los pocos meses me gustó. Gracias
+          Es el lenguaje en el que más tiempo he programado para el back-end, al principio me resultó complicado,
+          ya que es el primer lenguaje orientado a sistemas que estudiaba, pero a los pocos meses me gustó. Gracias
           a su sistema de tipos reporta una buena parte de los bugs al compilar, además de su rendimiento.
-          He programado apis con Actix y Axum en proyectos con arquitectura hexagonal y la implementación de tests,
+          He programado APIs con Actix y Axum en proyectos con arquitectura hexagonal y la implementación de tests,
           tanto de integración como unitarios.
         </p>
       </Article>
       <Article image={phpLogo} title={'PHP'}>
         <p>
-          Las primeras apis que realicé fueron con este lenguaje, siguiendo en su mayoría la arquitectura MVC. Junto con el
-          framework Laravel me permitían montar una api en poco tiempo, además llegue a desarrollar frontales en este mismo entorno
-          con el empleo del sistema de plantillas blade.
+          Las primeras APIs que realicé fueron con este lenguaje, siguiendo en su mayoría la arquitectura MVC. Junto con el
+          framework Laravel me permitían montar una API en poco tiempo, llegue además a desarrollar frontales en este mismo entorno
+          con el empleo del sistema de plantillas Blade.
         </p>
         <SecondaryText text={'*frameworks: Laravel.'} />
       </Article>
       <Article image={javaLogo} title={'Java'}>
         <p>
-          Primer leguaje con el que aprendí a programar, estuve unos dos años utilizándolo para aprender, lo he visto en aplicaciones 
+          Primer lenguaje con el que aprendí a programar, estuve unos dos años utilizándolo para aprender, lo he visto en aplicaciones 
           que llevan años en producción y necesitaban mantenimiento.
         </p>
       </Article>
       <Article title={'SQL'} image={sqlLogo}>
         <p>
-          Domino su sintáxis, lo he utilizado con los sistemas de gestíon de bases de datos MySQL, MariaDB y PostgreSQL. Lo aprendí escribiendo
-          consultas directamente en consola SQL para crear estructuras de base de datos y manipular su contenido. Actualmente hay bibliotecas
+          Domino su sintaxis, lo he utilizado con los sistemas de gestión de bases de datos MySQL, MariaDB y PostgreSQL. Lo aprendí escribiendo
+          consultas directamente en consola SQL para crear estructuras de base de datos y manipular su contenido. Actualmente, hay bibliotecas
           o incluso aplicaciones que te permiten crear y manipular bases de datos sin escribir consultas SQL, ocasionando que pierdas aptitudes con
-          respecto a la propia sintaxis SQL, no es mi caso, en mi trabajo he continuado de manera habitual escribiendo sentencias SQL, a parte del
-          empleo de bibliotecas del propio lenguaje que se esté utilizando, para ahorrar tiempo y hacer el código mas legible.
+          respecto a la propia sintaxis SQL, no es mi caso, en mi trabajo he continuado de manera habitual escribiendo sentencias SQL, aparte del
+          empleo de bibliotecas del propio lenguaje que se esté utilizando, para ahorrar tiempo y hacer el código más legible.
         </p>
       </Article>
       <Article image={cssLogo} title={'CSS'}>
         <p>
-          Me gusta implementar los diseños más originales que me supongan un reto, he estilado múltiples webs, siguiendo el principio
+          Me gusta implementar los diseños más originales que me supongan un reto, he estilado múltiples webs siguiendo el principio
           de dispositivos pequeños primero. Generando aplicaciones responsive que se adapten a los diferentes dispositivos con un
           estilo visual atractivo, que atraiga la atención del usuario a las acciones principales de la web.
         </p>
@@ -63,7 +63,7 @@ export const Technologies = () => {
       </Article>
       <Article image={typescriptLogo} title={'Typescript'}>
         <p>
-          En la mayoría de los proyectos de front-end programo en typscript, tengo una amplia experiencia en este
+          En la mayoría de los proyectos de front-end programo en Typscript, tengo una amplia experiencia en este
           lenguaje, conociendo conceptos más avanzados como los 'Union and intersection types', 'Conditional types',
           'Mapped types', etc.
         </p>
@@ -71,15 +71,15 @@ export const Technologies = () => {
       <Article image={javascriptLogo} title={'JavaScript'}>
         <p>
           Me mantengo actualizado de las novedades que van surgiendo en los diferentes navegadores. Conozco a fondo la mayoría
-          de las características del lenguaje, fué de los primeros lenguajes que aprendí y lo he utilizado en mi día a día desde
+          de las características del lenguaje, fue de los primeros lenguajes que aprendí y lo he utilizado en mi día a día desde
           entonces, como es lógico en el desarrollo web.
         </p>
         <SecondaryText text={'*frameworks: React, NodeJS, Svelt, Jest, AngularJS.'} />
       </Article>
       <Article title={'Otros lenguajes'}>
         <p>
-          Otros de los lenguajes que he estudiado en menor medida son python, en alguna de las asignaturas de primer año de carrera
-          y Ruby, del que miré cursos y documentación.
+          Otros de los lenguajes que he estudiado en menor medida son Python, en alguna de las asignaturas de primer año de carrera
+          y Ruby, del que mire cursos y documentación.
         </p>
         <SecondaryText text={'*frameworks: Ruby on Rails'} />
       </Article>

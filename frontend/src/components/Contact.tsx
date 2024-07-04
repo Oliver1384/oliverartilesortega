@@ -67,7 +67,7 @@ export const Contact = () => {
           copiedLink={copiedLink}
           onCopyLink={setCopiedLink} />
       </LinksContainer>
-      <a href={'curriculum.pdf'} download={'curriculum-oliver-artiles-ortega.pdf'}>
+      <a href={'curriculum-oliver-artiles-ortega.pdf'} download={'curriculum.pdf'}>
         <DownloadCVButton>
           <DownloadIcon src={downloadIcon} />
           Descargar CV

@@ -17,9 +17,9 @@ export const Projects = () => {
         </p>
         <p>
           Permite recibir y realizar llamadas, ponerlas en pausa, rebotar a otro servicio, hablar por chat, conectarse y desconectarse de diferentes colas
-          de llamada dependiendo del servicio que se quiera prestar. Dispone de un servicio de mensajería interno, para que los agentes puedan comunicarse entre sí.
+          de llamadas dependiendo del servicio que se quiera prestar. Dispone de un servicio de mensajería interno, para que los agentes puedan comunicarse entre sí.
           Contiene un sistema para gestionar las pausas del operador.
-          Tiene incorporado herramientas para que los supervisores puedan monitorear y controlar el servicio hacia los clientes y los
+          Tiene incorporadas herramientas para que los supervisores puedan monitorear y controlar el servicio hacia los clientes y los
           tiempos de trabajo y calidad de la atención de los operadores.
         </p>
         <p>
@@ -38,11 +38,11 @@ export const Projects = () => {
         </p>
         <p>
           Se compone de dos partes, un nuevo módulo acoplado al CTPhoneWeb, proyecto mencionado con anterioridad, desde donde también se crean y gestionan
-          lo horarios y número de huecos disponibles para reservar. Y una página web para que los ciudadanos puedan reservar, cancelar,
+          los horarios y número de huecos disponibles para reservar. Y una página web para que los ciudadanos puedan reservar, cancelar,
           consultar y unirse a una videollamada con un operador.
         </p>
         <p>
-          Se notifica a los ciudadanos de las citas mediante correo, sms o whatsapp.
+          Se notifica a los ciudadanos de las citas mediante correo, SMS o Whatsapp.
           Cuenta con chat con la posibilidad de subir archivos, fondos virtuales para las webcams, compartir pantalla, entre otras características.
         </p>
         <div style={{ display: 'flex', justifyContent: 'end' }}>
@@ -68,8 +68,8 @@ export const Projects = () => {
           Este proyecto lo realicé durante mi periodo de prácticas en empresa, junto a otros cuatro compañeros.
         </p>
         <p>
-          Pensada para ser utilizada principalmente en dispositivos móviles, permite al usuario hacer una foto de una máquinaria
-          de construcción que requiera de un conductor y analizarla para informar del permiso de circulacíon requerido y centros de
+          Pensada para ser utilizada principalmente en dispositivos móviles, permite al usuario hacer una foto de una maquinaria
+          de construcción que requiera de un conductor y analizarla para informar del permiso de circulación requerido y centros de
           formación cercanos donde obtenerlos.
         </p>
         <div style={{ display: 'flex', justifyContent: 'end' }}>
