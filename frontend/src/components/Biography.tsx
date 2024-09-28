@@ -3,7 +3,8 @@ import { styled } from '@mui/system'
 import { Contact } from './Contact'
 import { Section } from './ui/Section'
 import { Article } from './ui/Article'
-import {SecondaryTitle} from './ui/SecondaryTitle'
+import { SecondaryTitle } from './ui/SecondaryTitle'
+import { Certificates } from './Certificates'
 
 
 const ProfileImage = styled('img')({
@@ -41,6 +42,7 @@ export const Biography = () => {
         </p>
       </Article>
       <Contact />
+      <Certificates />
     </Section>
   )
 }
