@@ -27,7 +27,7 @@
     margin: 0;
     display: flex;
     justify-content: center;
-    min-width: 320px;
+    min-width: 100%;
     min-height: 100vh;
     background-color: #A5C9CA;
     font-family: 'GeistMonoRegular';

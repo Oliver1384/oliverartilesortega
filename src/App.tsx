@@ -21,7 +21,9 @@ const Page = styled('body')({
 })
 
 const Header = styled('header')({
-  width: '1240px',
+  display: 'flex',
+  justifyContent: 'center',
+  width: '100%',
   '@media(max-width:1240px)': {
     width: '100vw'
   }
