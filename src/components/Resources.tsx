@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { styled } from '@mui/system'
 import CloseIcon from '@mui/icons-material/Close'
 
@@ -48,6 +49,7 @@ const LinksContainer = styled('div')({
 })
 
 export const Resources = () => {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const handleClose = () => setOpen(false)
   const [currentBook, setCurrentBook] = useState<string | undefined>()
@@ -60,7 +62,7 @@ export const Resources = () => {
   return (
     <>
       <div>
-        <SecondaryTitle>Libros</SecondaryTitle>
+        <SecondaryTitle>{t('resources.books')}</SecondaryTitle>
         <BooksContainer>
           <Book onClick={() => onBookClick(cleanCodeBook)}>
             <BookImage src={cleanCodeBook} />
@@ -90,7 +92,7 @@ export const Resources = () => {
           </div>
         </Modal >
         <LinksContainer>
-          <SecondaryTitle>Documentaciones</SecondaryTitle>
+          <SecondaryTitle>{t('resources.documentation')}</SecondaryTitle>
           <Link href={'https://es.react.dev/reference/react'} target={'_blank'}>
             React Reference Overview
           </Link>

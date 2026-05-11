@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "technologies": "Tecnologías",
+    "projects": "Proyectos",
+    "tools": "Herramientas"
+  },
+  "biography": {
+    "title": "Oliver Artiles",
+    "subtitle": "Programador full stack.",
+    "p1": "Busco trabajar en proyectos que me supongan un reto y continuar mejorando como profesional, me gusta probar nuevas tecnologías.",
+    "p2": "Valoro mucho el trabajo en equipo, gracias a los compañeros de los diferentes grupos en los que he trabajado aprendí más rápido, tanto al ayudarme como al enseñar a otros.",
+    "p3": "Descubrí la programación el primer año de carrera en telecomunicaciones, con java y python. Me cambié a un ciclo superior de desarrollo de aplicaciones web, donde asenté mis conocimientos previos orientados a mi profesión actual. Me considero autodidacta y disfruto programando."
+  },
+  "contact": {
+    "title": "Información de contacto",
+    "downloadCV": "Descargar CV"
+  },
+  "certificates": {
+    "title": "Certificados obtenidos",
+    "reduxSagaReact": "Redux Saga with React",
+    "asyncJavascript": "Programación asíncrona con promises en Javascript",
+    "cleanCode": "Clean code",
+    "advancedJavascript": "Javascript avanzado",
+    "domManipulation": "Manipulación del DOM desde Javascript",
+    "agileMethodologies": "Metodologías ágiles",
+    "agileUml": "Agile UML",
+    "scrum": "SCRUM"
+  },
+  "projects": {
+    "ctPhoneWeb": {
+      "title": "CTPhoneWeb",
+      "description": "Software utilizado como herramienta de call center para la gestión y atención de las llamadas.",
+      "description2": "Permite recibir y realizar llamadas, ponerlas en pausa, rebotar a otro servicio, hablar por chat, conectarse y desconectarse de diferentes colas de llamadas dependiendo del servicio que se quiera prestar. Dispone de un servicio de mensajería interno, para que los agentes puedan comunicarse entre sí. Contiene un sistema para gestionar las pausas del operador. Tiene incorporadas herramientas para que los supervisores puedan monitorear y controlar el servicio hacia los clientes y los tiempos de trabajo y calidad de la atención de los operadores.",
+      "description3": "En constante evolución, se adapta a las necesidades de los distintos clientes, tales como 012, Binter, CanaryFly, entre otros."
+    },
+    "videoconferencia012": {
+      "title": "Videoconferencia 012",
+      "description": "Servicio que permite realizar gestiones del 012 Canarias por videollamada.",
+      "description2": "Se compone de dos partes, un nuevo módulo acoplado al CTPhoneWeb, proyecto mencionado con anterioridd, desde donde también se crean y gestionan los horarios y número de huecos disponibles para reservar. Y una página web para que los ciudadanos puedan reservar, cancelar, consultar y unirse a una videollamada con un operador.",
+      "description3": "Se notifica a los ciudadanos de las citas mediante correo, SMS o Whatsapp. Cuenta con chat con la posibilidad de subir archivos, fondos virtuales para las webcams, compartir pantalla, entre otras características."
+    },
+    "projectFitness": {
+      "title": "Project Fitness",
+      "description": "Aplicación para poner en contacto entrenadores personales con clientes. Hecho junto a otros tres compañeros de clase como proyecto de final de curso."
+    },
+    "nocnGroup": {
+      "title": "Aplicación para NOCN Group",
+      "description": "Este proyecto lo realicé durante mi periodo de prácticas en empresa, junto a otros cuatro compañeros.",
+      "description2": "Pensada para ser utilizada principalmente en dispositivos móviles, permite al usuario hacer una foto de una maquinaria de construcción que requiera de un conductor y analizarla para informar del permiso de circulación requerido y centros de formación cercanos donde obtenerlos."
+    }
+  },
+  "technologies": {
+    "rust": {
+      "title": "Rust",
+      "description": "Es el lenguaje en el que más tiempo he programado para el back-end, al principio me resultó complicado, ya que es el primer lenguaje orientado a sistemas que estudiaba, pero a los pocos meses me gustó. Gracias a su sistema de tipos reporta una buena parte de los bugs al compilar, además de su rendimiento. He programado APIs con Actix y Axum en proyectos con arquitectura hexagonal y la implementación de tests, tanto de integración como unitarios."
+    },
+    "php": {
+      "title": "PHP",
+      "description": "Las primeras APIs que realicé fueron con este lenguaje, siguiendo en su mayoría la arquitectura MVC. Junto con el framework Laravel me permitían montar una API en poco tiempo, llegue además a desarrollar frontales en este mismo entorno con el empleo del sistema de plantillas Blade.",
+      "note": "*frameworks: Laravel."
+    },
+    "java": {
+      "title": "Java",
+      "description": "Primer lenguaje con el que aprendí a programar, estuve unos dos años utilizándolo para aprender, lo he visto en aplicaciones que llevan años en producción y necesitaban mantenimiento."
+    },
+    "sql": {
+      "title": "SQL",
+      "description": "Dominio su sintaxis, lo he utilizado con los sistemas de gestión de bases de datos MySQL, MariaDB y PostgreSQL. Lo aprendí escribiendo consultas directamente en consola SQL para crear estructuras de base de datos y manipular su contenido. Actualmente, hay bibliotecas o incluso aplicaciones que te permiten crear y manipular bases de datos sin escribir consultas SQL, ocasionando que pierdas aptitudes con respecto a la propia sintaxis SQL, no es mi caso, en mi trabajo he continuado de manera habitual escribiendo sentencias SQL, aparte del empleo de bibliotecas del propio lenguaje que se esté utilizando, para ahorrar tiempo y hacer el código más legible."
+    },
+    "css": {
+      "title": "CSS",
+      "description": "Me gusta implementar los diseños más originales que me supongan un reto, he estilado múltiples webs siguiendo el principio de dispositivos pequeños primero. Generando aplicaciones responsive que se adapten a los diferentes dispositivos con un estilo visual atractivo, que atraiga la atención del usuario a las acciones principales de la web.",
+      "note": "*frameworks: Tailwind CSS, Bootstrap."
+    },
+    "html": {
+      "title": "HTML",
+      "description": "Me preocupo por el uso adecuado de las diferentes etiquetas para estructurar la página, ya que facilita luego trabajar sobre esta y que las aplicaciones para la accesibilidad puedan interpretar la página de manera adecuada. Además, los motores de búsqueda posicionan mejor la web cuando contienen una estructura que sigue los estándares web."
+    },
+    "typescript": {
+      "title": "Typescript",
+      "description": "En la mayoría de los proyectos de front-end programo en Typscript, tengo una amplia experiencia en este lenguaje, conociendo conceptos más avanzados como los 'Union and intersection types', 'Conditional types', 'Mapped types', etc."
+    },
+    "javascript": {
+      "title": "JavaScript",
+      "description": "Me mantengo actualizado de las novedades que van surgiendo en los diferentes navegadores. Conozco a fondo la mayoría de las características del lenguaje, fue de los primeros lenguajes que aprendí y lo he utilizado en mi día a día desde entonces, como es lógico en el desarrollo web.",
+      "note": "*frameworks: React, NodeJS, Svelte, Jest, AngularJS."
+    },
+    "other": {
+      "title": "Otros lenguajes",
+      "description": "Otros de los lenguajes que he estudiado en menor medida son Python, en alguna de las asignaturas de primer año de carrera y Ruby, del que mire cursos y documentación.",
+      "note": "*frameworks: Ruby on Rails"
+    }
+  },
+  "tools": {
+    "editors": {
+      "title": "Editores",
+      "description": "Comencé utilizando Visual Studio Code, pero después de probar IntelliJ me gustó mucho y es la que he utilizado la mayoría del tiempo. Cuando descubrí Vim y lo comencé a dominar con cierta soltura, en combinación con los editores de Jetbrains se ha convertido en mis herramientas para desarrollo favoritas. Para la programación en proyectos personales, me gusta utilizar LunarVim."
+    },
+    "operatingSystem": {
+      "title": "Sistema operativo",
+      "description": "Me encanta trabajar en Linux, mi distro favorita es Ubuntu, conozco muy bien la estructura y comandos de este sistema operativo. El intérprete de comandos ZSH con el multiplexor Tmux me proporcionan eficiencia en la rutina de trabajo."
+    },
+    "otherApps": {
+      "title": "Otras aplicaciones",
+      "description": "Para evitar que el software dependa del sistema en el que estoy desarrollando utilizo Docker, he concluido cursos sobre este y llevo bastante tiempo utilizándolo. Junto con docker-compose, elimina los conflictos de los diferentes entornos de desarrollo a la hora de colaborar en un equipo, evitando además, instalar dependencias en el propio equipo.",
+      "description2": "El control de versiones de los proyectos con Git, prefiero utilizarlo por terminal, por lo que conozco los comando esenciales para el ciclo de desarrollo habitual.",
+      "description3": "Para hacer pruebas integrales de una aplicación web utilizo Selenium."
+    },
+    "methodologies": {
+      "title": "Metodologías de desarrollo",
+      "description": "Estoy habituado a trabajar en equipos de 3 a 5 miembros, siguiendo la metodología SCRUM, dividiendo los objetivos en tareas y gestionando el proyecto con ramas mediante Git."
+    },
+    "hardware": {
+      "title": "Hardware",
+      "description": "Siempre me ha gustado el mundo de la tecnología y aprender y experimentar con lo nuevo que va llegando al mercado. Antes de dedicarme plenamente al desarrollo, me gustaba montar y reparar ordenadores, conozco bien los diferentes componentes y cómo se encuentra el mercado actual. Ahora solo lo sigo por hobby y cambio o monto ordenadores por interés personal o para ayudar algún amigo o familiar. Desde que aprendí a programar, disfruto más el desarrollo web y esto se ha convertido en algo secundario."
+    },
+    "booksAndDocs": {
+      "title": "Libros y documentación",
+      "description": "A la hora de aprender prefiero leer a ver vídeos, me resulta más cómodo, es por ello que una buena parte de lo que conozco proviene de algún libro o de la documentación de alguna tecnología."
+    }
+  },
+  "resources": {
+    "books": "Libros",
+    "documentation": "Documentaciones"
+  }
+}

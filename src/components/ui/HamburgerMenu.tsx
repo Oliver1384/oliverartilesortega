@@ -58,9 +58,9 @@ export const HamburgerMenu = ({ onChangePageState, pageState, onSetIsDrawerOpen,
                 display: 'block !important'
               }
             },
-            '&.MuiIconButton-root:focus': {
-              outline: '0px auto -webkit-focus-ring-color'
-            }
+            "&.MuiIconButton-root:focus": {
+              outline: "0px auto -webkit-focus-ring-color",
+            },
           }}
           edge={'start'}
           onClick={() => onSetIsDrawerOpen(true)}>

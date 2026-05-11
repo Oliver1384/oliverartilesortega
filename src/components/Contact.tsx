@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { styled } from '@mui/system'
 
 import { Article } from './ui/Article.tsx'
@@ -41,10 +42,11 @@ const DownloadIcon = styled('img')({
 })
 
 export const Contact = () => {
+  const { t } = useTranslation()
   const [copiedLink, setCopiedLink] = useState<string | null>(null)
 
   return (
-    <Article title={'Información de contacto'}>
+    <Article title={t('contact.title')}>
       <LinksContainer>
         <ContactLink
           logo={linkedinLogo}
@@ -70,7 +72,7 @@ export const Contact = () => {
       <a href={'curriculum-oliver-artiles-ortega.pdf'} download={'curriculum.pdf'}>
         <DownloadCVButton>
           <DownloadIcon src={downloadIcon} />
-          Descargar CV
+          {t('contact.downloadCV')}
         </DownloadCVButton>
       </a>
     </Article>

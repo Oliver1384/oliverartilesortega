@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "about": "About me",
+    "technologies": "Technologies",
+    "projects": "Projects",
+    "tools": "Tools"
+  },
+  "biography": {
+    "title": "Oliver Artiles",
+    "subtitle": "Full stack programmer.",
+    "p1": "I seek to work on projects that challenge me and continue improving as a professional. I like trying out new technologies.",
+    "p2": "I highly value teamwork, thanks to colleagues from different groups I've worked with, I learned faster, both by helping me and by teaching others.",
+    "p3": "I discovered programming during my first year of telecommunications studies, with Java and Python. I switched to a higher education program in web application development, where I consolidated my previous knowledge oriented toward my current profession. I'm self-taught and enjoy programming."
+  },
+  "contact": {
+    "title": "Contact information",
+    "downloadCV": "Download CV"
+  },
+  "certificates": {
+    "title": "Obtained certificates",
+    "reduxSagaReact": "Redux Saga with React",
+    "asyncJavascript": "Asynchronous programming with promises in Javascript",
+    "cleanCode": "Clean code",
+    "advancedJavascript": "Advanced Javascript",
+    "domManipulation": "DOM manipulation from Javascript",
+    "agileMethodologies": "Agile methodologies",
+    "agileUml": "Agile UML",
+    "scrum": "SCRUM"
+  },
+  "projects": {
+    "ctPhoneWeb": {
+      "title": "CTPhoneWeb",
+      "description": "Software used as a call center tool for managing and handling calls.",
+      "description2": "It allows receiving and making calls, putting them on hold, transferring to another service, chatting, connecting and disconnecting from different call queues depending on the service to be provided. It has an internal messaging service so agents can communicate with each other. It includes a system to manage operator breaks. It has built-in tools for supervisors to monitor and control service to customers and operator work times and quality.",
+      "description3": "In constant evolution, it adapts to the needs of different clients such as 012, Binter, CanaryFly, among others."
+    },
+    "videoconferencia012": {
+      "title": "Videoconferencia 012",
+      "description": "Service that allows performing 012 Canary Islands transactions via video call.",
+      "description2": "It consists of two parts, a new module coupled to CTPhoneWeb, project mentioned above, from where schedules and number of available slots are also created and managed. And a website for citizens to book, cancel, consult and join a video call with an operator.",
+      "description3": "Citizens are notified of appointments via email, SMS or WhatsApp. It has chat with the ability to upload files, virtual backgrounds for webcams, screen sharing, among other features."
+    },
+    "projectFitness": {
+      "title": "Project Fitness",
+      "description": "Application to connect personal trainers with clients. Made with three other classmates as a final course project."
+    },
+    "nocnGroup": {
+      "title": "Application for NOCN Group",
+      "description": "This project was carried out during my internship period, along with four other teammates.",
+      "description2": "Designed to be used primarily on mobile devices, it allows the user to take a photo of construction machinery that requires a driver and analyze it to inform about the required driving license and nearby training centers where to obtain it."
+    }
+  },
+  "technologies": {
+    "rust": {
+      "title": "Rust",
+      "description": "It's the language I've programmed the most for back-end. At first it seemed complicated, since it's the first systems-oriented language I studied, but after a few months I liked it. Thanks to its type system, it reports a good part of the bugs at compile time, in addition to its performance. I've programmed APIs with Actix and Axum in hexagonal architecture projects and implemented tests, both integration and unit tests."
+    },
+    "php": {
+      "title": "PHP",
+      "description": "The first APIs I made were with this language, mostly following MVC architecture. Together with the Laravel framework, they allowed me to set up an API quickly. I also developed frontends in this same environment using the Blade template system.",
+      "note": "*frameworks: Laravel."
+    },
+    "java": {
+      "title": "Java",
+      "description": "The first language I learned to program with. I used it for about two years to learn. I've seen it in applications that have been in production for years and needed maintenance."
+    },
+    "sql": {
+      "title": "SQL",
+      "description": "I master its syntax. I've used it with MySQL, MariaDB and PostgreSQL database management systems. I learned it by writing queries directly in the SQL console to create database structures and manipulate their content. Currently, there are libraries or even applications that allow you to create and manipulate databases without writing SQL queries, causing you to lose skills with SQL syntax itself. That's not my case; in my work I continue regularly writing SQL statements, in addition to using libraries from the language being used, to save time and make code more readable."
+    },
+    "css": {
+      "title": "CSS",
+      "description": "I like implementing the most original designs that challenge me. I've styled multiple websites following the mobile-first principle. Generating responsive applications that adapt to different devices with an attractive visual style that attracts user attention to the main actions of the website.",
+      "note": "*frameworks: Tailwind CSS, Bootstrap."
+    },
+    "html": {
+      "title": "HTML",
+      "description": "I care about the proper use of different tags to structure the page, as it facilitates working on it later and allows accessibility applications to interpret the page properly. Additionally, search engines better position the website when it contains a structure that follows web standards."
+    },
+    "typescript": {
+      "title": "Typescript",
+      "description": "In most front-end projects I program in TypeScript. I have extensive experience with this language, knowing more advanced concepts like 'Union and intersection types', 'Conditional types', 'Mapped types', etc."
+    },
+    "javascript": {
+      "title": "JavaScript",
+      "description": "I stay updated on the news emerging in different browsers. I know most of the language's features in depth. It was one of the first languages I learned and I've used it in my daily life since then, as is logical in web development.",
+      "note": "*frameworks: React, NodeJS, Svelte, Jest, AngularJS."
+    },
+    "other": {
+      "title": "Other languages",
+      "description": "Other languages I've studied to a lesser extent are Python, in some first-year college courses, and Ruby, from which I've looked at courses and documentation.",
+      "note": "*frameworks: Ruby on Rails"
+    }
+  },
+  "tools": {
+    "editors": {
+      "title": "Editors",
+      "description": "I started using Visual Studio Code, but after trying IntelliJ, I liked it a lot and it's what I've used most of the time. When I discovered Vim and began to master it with some ease, in combination with JetBrains editors, it has become my favorite development tools. For programming personal projects, I like to use LunarVim."
+    },
+    "operatingSystem": {
+      "title": "Operating system",
+      "description": "I love working on Linux. My favorite distro is Ubuntu. I know very well the structure and commands of this operating system. The ZSH command line with the Tmux multiplexer provides efficiency in my work routine."
+    },
+    "otherApps": {
+      "title": "Other applications",
+      "description": "To prevent software from depending on the system I'm developing on, I use Docker. I've completed courses on this and have been using it for quite some time. Together with docker-compose, it eliminates conflicts from different development environments when collaborating in a team, also avoiding installing dependencies on the own machine.",
+      "description2": "I prefer to use Git for version control of projects via terminal, so I know the essential commands for the usual development cycle.",
+      "description3": "I use Selenium for integral testing of a web application."
+    },
+    "methodologies": {
+      "title": "Development methodologies",
+      "description": "I'm used to working in teams of 3 to 5 members, following the SCRUM methodology, dividing objectives into tasks and managing the project with branches through Git."
+    },
+    "hardware": {
+      "title": "Hardware",
+      "description": "I've always liked the world of technology and learning and experimenting with what's new coming to the market. Before fully dedicating myself to development, I liked assembling and repairing computers. I know well the different components and how the current market is. Now I only follow it as a hobby and change or assemble computers for personal interest or to help friends or family. Since I learned to program, I enjoy web development more and this has become something secondary."
+    },
+    "booksAndDocs": {
+      "title": "Books and documentation",
+      "description": "When learning, I prefer reading over watching videos. I find it more comfortable. That's why a good part of what I know comes from some book or from the documentation of some technology."
+    }
+  },
+  "resources": {
+    "books": "Books",
+    "documentation": "Documentation"
+  }
+}
