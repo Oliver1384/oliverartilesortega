@@ -15,6 +15,7 @@ import {
 import { PRIMARY_COLORS } from '../../colors'
 import { PageState } from '../types'
 import { MenuButton } from './MenuButton'
+import { LanguageToggleButton } from './LanguageButton'
 
 const NavBar = styled('div')({
   display: 'flex',
@@ -83,6 +84,7 @@ export const HamburgerMenu = ({ onChangePageState, pageState, onSetIsDrawerOpen,
             isSelected={pageState === PageState.Tools}
             onClick={() => onChangePageState(PageState.Tools)}
             text={'Herramientas'} />
+          <LanguageToggleButton />
         </NavBar>
         <Drawer
           anchor={'right'}
