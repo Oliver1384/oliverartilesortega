@@ -16,6 +16,7 @@ import { PRIMARY_COLORS } from '../../colors'
 import { PageState } from '../types'
 import { MenuButton } from './MenuButton'
 import { LanguageToggleButton } from './LanguageButton'
+import { useTranslation } from 'react-i18next'
 
 const NavBar = styled('div')({
   display: 'flex',
@@ -44,46 +45,57 @@ interface Props {
   pageState: PageState
 }
 
-export const HamburgerMenu = ({ onChangePageState, pageState, onSetIsDrawerOpen, isDrawerOpen }: Props) => {
+export const HamburgerMenu = ({
+  onChangePageState,
+  pageState,
+  onSetIsDrawerOpen,
+  isDrawerOpen,
+}: Props) => {
+  const { t } = useTranslation();
 
   return (
-    <AppBar position={'static'}>
+    <AppBar position={"static"}>
       <Toolbar sx={{ backgroundColor: PRIMARY_COLORS.section }}>
         <IconButton
           sx={{
-            '&.MuiIconButton-root': {
-              display: 'none !important',
-              marginRight: '2rem',
+            "&.MuiIconButton-root": {
+              display: "none !important",
+              marginRight: "2rem",
               color: PRIMARY_COLORS.pageBackground,
-              '@media(max-width:790px)': {
-                display: 'block !important'
-              }
+              "@media(max-width:790px)": {
+                display: "block !important",
+              },
             },
             "&.MuiIconButton-root:focus": {
               outline: "0px auto -webkit-focus-ring-color",
             },
           }}
-          edge={'start'}
-          onClick={() => onSetIsDrawerOpen(true)}>
+          edge={"start"}
+          onClick={() => onSetIsDrawerOpen(true)}
+        >
           <MenuIcon />
         </IconButton>
         <NavBar>
           <MenuButton
             isSelected={pageState === PageState.Biography}
             onClick={() => onChangePageState(PageState.Biography)}
-            text={'Sobre mí'} />
+            text={t("nav.about")}
+          />
           <MenuButton
             isSelected={pageState === PageState.Technologies}
             onClick={() => onChangePageState(PageState.Technologies)}
-            text={'Tecnologías'} />
+            text={t("nav.technologies")}
+          />
           <MenuButton
             isSelected={pageState === PageState.Projects}
             onClick={() => onChangePageState(PageState.Projects)}
-            text={'Proyectos'} />
+            text={t("nav.projects")}
+          />
           <MenuButton
             isSelected={pageState === PageState.Tools}
             onClick={() => onChangePageState(PageState.Tools)}
-            text={'Herramientas'} />
+            text={t("nav.tools")}
+          />
           <LanguageToggleButton />
         </NavBar>
         <Drawer
@@ -126,5 +138,5 @@ export const HamburgerMenu = ({ onChangePageState, pageState, onSetIsDrawerOpen,
         </Drawer>
       </Toolbar>
     </AppBar>
-  )
-}
+  );
+};
