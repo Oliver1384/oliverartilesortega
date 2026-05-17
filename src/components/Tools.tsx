@@ -1,10 +1,10 @@
-import { useTranslation } from 'react-i18next'
-import { Article } from './ui/Article'
-import { Section } from './ui/Section'
-import { Resources} from './Resources'
+import { useTranslation } from 'react-i18next';
+import { Article } from './ui/Article';
+import { Section } from './ui/Section';
+import { Resources } from './Resources';
 
 export const Tools = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <Section>
@@ -30,8 +30,8 @@ export const Tools = () => {
       </Article>
       <Article title={t('tools.booksAndDocs.title')}>
         <p>{t('tools.booksAndDocs.description')}</p>
-        <Resources/>
+        <Resources />
       </Article>
     </Section>
-  )
-}
+  );
+};

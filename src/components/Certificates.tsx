@@ -1,9 +1,9 @@
-import { useTranslation } from 'react-i18next'
-import { Link } from './ui/Link.tsx'
-import { Article } from './ui/Article.tsx'
+import { useTranslation } from 'react-i18next';
+import { Link } from './ui/Link.tsx';
+import { Article } from './ui/Article.tsx';
 
 export const Certificates = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <Article title={t('certificates.title')}>
@@ -39,5 +39,5 @@ export const Certificates = () => {
         {t('certificates.scrum')}
       </Link>
     </Article>
-  )
-}
+  );
+};

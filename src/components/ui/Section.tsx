@@ -1,5 +1,5 @@
-import { styled } from '@mui/system'
-import { TEXT_COLORS } from '../../colors'
+import { styled } from '@mui/system';
+import { TEXT_COLORS } from '../../colors';
 
 export const Section = styled('section')({
   color: TEXT_COLORS.primary,
@@ -10,5 +10,5 @@ export const Section = styled('section')({
   fontFamily: 'GeistMonoRegular',
   '@media(min-width: 1024px)': {
     margin: '2rem',
-  }
-})
+  },
+});

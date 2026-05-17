@@ -1,19 +1,18 @@
-import { useTranslation } from 'react-i18next'
-import rustLogo from '../assets/logos/rust-logo.png'
-import typescriptLogo from '../assets/logos/typescript-logo.png'
-import phpLogo from '../assets/logos/php-logo.png'
-import javaLogo from '../assets/logos/java-logo.png'
-import sqlLogo from '../assets/logos/sql-logo.png'
-import javascriptLogo from '../assets/logos/javascript-logo.png'
-import cssLogo from '../assets/logos/css-logo.png'
-import htmlLogo from '../assets/logos/html-logo.png'
-import { Article } from './ui/Article'
-import { Section } from './ui/Section'
-import { SecondaryText } from './ui/SecondaryText'
-
+import { useTranslation } from 'react-i18next';
+import rustLogo from '../assets/logos/rust-logo.png';
+import typescriptLogo from '../assets/logos/typescript-logo.png';
+import phpLogo from '../assets/logos/php-logo.png';
+import javaLogo from '../assets/logos/java-logo.png';
+import sqlLogo from '../assets/logos/sql-logo.png';
+import javascriptLogo from '../assets/logos/javascript-logo.png';
+import cssLogo from '../assets/logos/css-logo.png';
+import htmlLogo from '../assets/logos/html-logo.png';
+import { Article } from './ui/Article';
+import { Section } from './ui/Section';
+import { SecondaryText } from './ui/SecondaryText';
 
 export const Technologies = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <Section>
@@ -49,5 +48,5 @@ export const Technologies = () => {
         <SecondaryText text={t('technologies.other.note')} />
       </Article>
     </Section>
-  )
-}
+  );
+};

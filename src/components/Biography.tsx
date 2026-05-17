@@ -1,12 +1,11 @@
-import { styled } from '@mui/system'
-import { useTranslation } from 'react-i18next'
+import { styled } from '@mui/system';
+import { useTranslation } from 'react-i18next';
 
-import { Contact } from './Contact'
-import { Section } from './ui/Section'
-import { Article } from './ui/Article'
-import { SecondaryTitle } from './ui/SecondaryTitle'
-import { Certificates } from './Certificates'
-
+import { Contact } from './Contact';
+import { Section } from './ui/Section';
+import { Article } from './ui/Article';
+import { SecondaryTitle } from './ui/SecondaryTitle';
+import { Certificates } from './Certificates';
 
 const ProfileImage = styled('img')({
   borderRadius: '50%',
@@ -16,12 +15,12 @@ const ProfileImage = styled('img')({
   '@media(min-width:790px)': {
     float: 'right',
     margin: '8px',
-    order: 'inherit'
-  }
-})
+    order: 'inherit',
+  },
+});
 
 export const Biography = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <Section>
@@ -35,5 +34,5 @@ export const Biography = () => {
       <Contact />
       <Certificates />
     </Section>
-  )
-}
+  );
+};

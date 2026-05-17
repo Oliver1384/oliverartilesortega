@@ -1,21 +1,21 @@
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { styled } from '@mui/system'
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { styled } from '@mui/system';
 
-import { Article } from './ui/Article.tsx'
-import { ContactLink } from './ui/ContactLink.tsx'
-import linkedinLogo from '../assets/logos/linkedin-logo.png'
-import githubLogo from '../assets/logos/github-logo.png'
-import gmailLogo from '../assets/logos/gmail-logo.png'
-import codewarsLogo from '../assets/logos/codewars-logo.png'
-import downloadIcon from '../assets/icons/download-icon.svg'
-import { PRIMARY_COLORS } from '../colors.ts'
+import { Article } from './ui/Article.tsx';
+import { ContactLink } from './ui/ContactLink.tsx';
+import linkedinLogo from '../assets/logos/linkedin-logo.png';
+import githubLogo from '../assets/logos/github-logo.png';
+import gmailLogo from '../assets/logos/gmail-logo.png';
+import codewarsLogo from '../assets/logos/codewars-logo.png';
+import downloadIcon from '../assets/icons/download-icon.svg';
+import { PRIMARY_COLORS } from '../colors.ts';
 
 const LinksContainer = styled('div')({
   display: 'flex',
   flexDirection: 'column',
-  marginBottom: '50px'
-})
+  marginBottom: '50px',
+});
 
 const DownloadCVButton = styled('button')({
   borderRadius: '10px',
@@ -28,22 +28,22 @@ const DownloadCVButton = styled('button')({
   fontSize: '15px',
   '&:active': {
     backgroundColor: PRIMARY_COLORS.element,
-    color: 'white'
+    color: 'white',
   },
   '&:active > img': {
-    filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)'
-  }
-})
+    filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)',
+  },
+});
 
 const DownloadIcon = styled('img')({
   width: '25px',
   height: '25px',
   marginRight: '5px',
-})
+});
 
 export const Contact = () => {
-  const { t } = useTranslation()
-  const [copiedLink, setCopiedLink] = useState<string | null>(null)
+  const { t } = useTranslation();
+  const [copiedLink, setCopiedLink] = useState<string | null>(null);
 
   return (
     <Article title={t('contact.title')}>
@@ -52,22 +52,26 @@ export const Contact = () => {
           logo={linkedinLogo}
           url={'https://www.linkedin.com/in/oliver-artiles-ortega-8a9180226'}
           copiedLink={copiedLink}
-          onCopyLink={setCopiedLink} />
+          onCopyLink={setCopiedLink}
+        />
         <ContactLink
           logo={githubLogo}
           url={'https://github.com/Oliver1384'}
           copiedLink={copiedLink}
-          onCopyLink={setCopiedLink} />
+          onCopyLink={setCopiedLink}
+        />
         <ContactLink
           logo={gmailLogo}
           url={'oliveartiless@gmail.com'}
           copiedLink={copiedLink}
-          onCopyLink={setCopiedLink} />
+          onCopyLink={setCopiedLink}
+        />
         <ContactLink
           logo={codewarsLogo}
           url={'https://www.codewars.com/users/oliver1384'}
           copiedLink={copiedLink}
-          onCopyLink={setCopiedLink} />
+          onCopyLink={setCopiedLink}
+        />
       </LinksContainer>
       <a href={'curriculum-oliver-artiles-ortega.pdf'} download={'curriculum.pdf'}>
         <DownloadCVButton>
@@ -76,5 +80,5 @@ export const Contact = () => {
         </DownloadCVButton>
       </a>
     </Article>
-  )
-}
+  );
+};

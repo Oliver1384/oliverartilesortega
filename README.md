@@ -6,15 +6,15 @@ Personal portfolio website showcasing professional profile, skills, projects, an
 
 ## Tech Stack
 
-| Category | Technology | Version |
-|----------|------------|---------|
-| Framework | React | 19.2.5 |
-| Language | TypeScript | 6.0.3 |
-| Build Tool | Vite | 8.0.10 |
-| UI Library | MUI (Material-UI) | 9.0.0 |
-| Styling | Emotion | 11.14.0 |
-| Linting | ESLint | 10.2.1 |
-| Formatting | Prettier | 3.8.3 |
+| Category   | Technology        | Version |
+| ---------- | ----------------- | ------- |
+| Framework  | React             | 19.2.5  |
+| Language   | TypeScript        | 6.0.3   |
+| Build Tool | Vite              | 8.0.10  |
+| UI Library | MUI (Material-UI) | 9.0.0   |
+| Styling    | Emotion           | 11.14.0 |
+| Linting    | ESLint            | 10.2.1  |
+| Formatting | Prettier          | 3.8.3   |
 
 ## Features
 
@@ -44,14 +44,14 @@ npm start
 
 ## Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm start` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
-| `npm run lint:fix` | Auto-fix linting issues |
-| `npm run format` | Format code with Prettier |
+| Command            | Description               |
+| ------------------ | ------------------------- |
+| `npm start`        | Start development server  |
+| `npm run build`    | Build for production      |
+| `npm run preview`  | Preview production build  |
+| `npm run lint`     | Run ESLint                |
+| `npm run lint:fix` | Auto-fix linting issues   |
+| `npm run format`   | Format code with Prettier |
 
 ## Directory Structure
 
@@ -89,12 +89,12 @@ src/
 
 ## Color Palette
 
-| Purpose | Color | Hex |
-|---------|-------|-----|
+| Purpose           | Color      | Hex       |
+| ----------------- | ---------- | --------- |
 | Primary/Component | Dark Slate | `#2C3333` |
-| Section | Teal Gray | `#395B64` |
-| Background | Light Mint | `#E7F6F2` |
-| Element | Soft Cyan | `#A5C9CA` |
+| Section           | Teal Gray  | `#395B64` |
+| Background        | Light Mint | `#E7F6F2` |
+| Element           | Soft Cyan  | `#A5C9CA` |
 
 ## Page Navigation
 

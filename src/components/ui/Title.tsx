@@ -1,7 +1,6 @@
-import { styled } from '@mui/system'
+import { styled } from '@mui/system';
 
 export const Title = styled('h1')(() => ({
   fontFamily: 'GeistMonoBold',
-  fontSize: '24px'
-}))
-
+  fontSize: '24px',
+}));

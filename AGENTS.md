@@ -10,15 +10,15 @@
 
 ## Tech Stack
 
-| Category | Technology |
-|----------|------------|
-| Framework | React 19.2.5 |
-| Language | TypeScript 6.0.3 |
-| Build Tool | Vite 8.0.10 |
+| Category   | Technology              |
+| ---------- | ----------------------- |
+| Framework  | React 19.2.5            |
+| Language   | TypeScript 6.0.3        |
+| Build Tool | Vite 8.0.10             |
 | UI Library | MUI (Material-UI) 9.0.0 |
-| Styling | Emotion + CSS |
-| Linting | ESLint 10.2.1 |
-| Formatting | Prettier 3.8.3 |
+| Styling    | Emotion + CSS           |
+| Linting    | ESLint 10.2.1           |
+| Formatting | Prettier 3.8.3          |
 
 ## Directory Structure
 
@@ -56,14 +56,14 @@ src/
 
 ## Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm start` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
-| `npm run lint:fix` | Auto-fix linting issues |
-| `npm run format` | Format code with Prettier |
+| Command            | Description               |
+| ------------------ | ------------------------- |
+| `npm start`        | Start development server  |
+| `npm run build`    | Build for production      |
+| `npm run preview`  | Preview production build  |
+| `npm run lint`     | Run ESLint                |
+| `npm run lint:fix` | Auto-fix linting issues   |
+| `npm run format`   | Format code with Prettier |
 
 ## Key Dependencies
 
@@ -99,14 +99,14 @@ The app uses state-based routing via `PageState` enum in `src/components/types.t
 
 ## Important Files
 
-| File | Purpose |
-|------|---------|
-| `src/App.tsx` | Main component, page state management, drawer state |
-| `src/colors.ts` | Color theme constants |
-| `src/components/types.ts` | `PageState` enum for navigation |
-| `src/components/Contact.tsx` | Social links (LinkedIn, GitHub, Gmail, Codewars) |
-| `src/components/Resources.tsx` | Books modal gallery |
-| `src/components/ui/HamburgerMenu.tsx` | Mobile navigation |
+| File                                  | Purpose                                             |
+| ------------------------------------- | --------------------------------------------------- |
+| `src/App.tsx`                         | Main component, page state management, drawer state |
+| `src/colors.ts`                       | Color theme constants                               |
+| `src/components/types.ts`             | `PageState` enum for navigation                     |
+| `src/components/Contact.tsx`          | Social links (LinkedIn, GitHub, Gmail, Codewars)    |
+| `src/components/Resources.tsx`        | Books modal gallery                                 |
+| `src/components/ui/HamburgerMenu.tsx` | Mobile navigation                                   |
 
 ## Build Output
 
