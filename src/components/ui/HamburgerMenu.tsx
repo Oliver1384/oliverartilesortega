@@ -31,12 +31,12 @@ const NavBar = styled('div')({
   },
 });
 
-const mobileNavbar = new Map([
-  ['Sobre mí', PageState.Biography],
-  ['Tecnologías', PageState.Technologies],
-  ['Proyectos', PageState.Projects],
-  ['Herramientas', PageState.Tools],
-]);
+const mobileNavbar = [
+  { key: 'nav.about', pageState: PageState.Biography },
+  { key: 'nav.technologies', pageState: PageState.Technologies },
+  { key: 'nav.projects', pageState: PageState.Projects },
+  { key: 'nav.tools', pageState: PageState.Tools },
+];
 
 interface Props {
   onChangePageState: (state: PageState) => void;
@@ -140,17 +140,17 @@ export const HamburgerMenu = ({
             >
               <CloseIcon />
             </IconButton>
-            {Array.from(mobileNavbar).map(([text, state]) => (
-              <ListItem key={text} disablePadding onClick={() => onChangePageState(state)}>
+            {mobileNavbar.map((item) => (
+              <ListItem key={item.key} disablePadding onClick={() => onChangePageState(item.pageState)}>
                 <ListItemButton>
                   <ListItemText
                     sx={{
                       '& > span.MuiTypography-root': {
-                        fontFamily: state === pageState ? 'GeistMonoBold' : 'GeistMonoSemiBold',
+                        fontFamily: item.pageState === pageState ? 'GeistMonoBold' : 'GeistMonoSemiBold',
                       },
-                      textDecoration: state === pageState ? 'underline' : 'none',
+                      textDecoration: item.pageState === pageState ? 'underline' : 'none',
                     }}
-                    primary={text}
+                    primary={t(item.key)}
                   />
                 </ListItemButton>
               </ListItem>
