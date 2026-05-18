@@ -28,6 +28,14 @@
     "scrum": "SCRUM"
   },
   "projects": {
+    "genasysProtectMultiChannelAlerting": {
+      "title": "Genasys Protect - Multi-Channel Alerting",
+      "description": "It's a public safety and emergency communication platform designed to help governments, emergency agencies, schools, universities, and businesses send fast and targeted alerts during emergencies or important events. The system uses “multi-channel alerting,” meaning it can deliver messages through several communication methods at the same time, such as SMS, mobile push notifications, email, voice calls, social media, radio, TV, sirens, and public address systems."
+    },
+    "genasysProtectCommunicationZones": {
+      "title": "Genasys Protect - Communication Zones",
+      "description": "A location-based emergency management and communication system that helps authorities organize, monitor, and communicate with people using predefined geographic zones instead of broad citywide alerts. The idea is to divide communities, campuses, or operational areas into intelligent “communication zones” so responders can send highly targeted updates during emergencies or daily operations."
+    },
     "ctPhoneWeb": {
       "title": "CTPhoneWeb",
       "description": "Software used as a call center tool for managing and handling calls.",

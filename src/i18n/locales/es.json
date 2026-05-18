@@ -48,6 +48,14 @@
       "title": "Aplicación para NOCN Group",
       "description": "Este proyecto lo realicé durante mi periodo de prácticas en empresa, junto a otros cuatro compañeros.",
       "description2": "Pensada para ser utilizada principalmente en dispositivos móviles, permite al usuario hacer una foto de una maquinaria de construcción que requiera de un conductor y analizarla para informar del permiso de circulación requerido y centros de formación cercanos donde obtenerlos."
+    },
+    "genasysProtectMultiChannelAlerting": {
+      "title": "Genasys Protect - Alertas Multi-Canales",
+      "description": "Es una plataforma de seguridad pública y comunicación de emergencias diseñada para ayudar a gobiernos, agencias de emergencia, escuelas, universidades y empresas a enviar alertas rápidas y específicas durante emergencias o eventos importantes. El sistema utiliza \"alertas multi-canales\", lo que significa que puede delivering mensajes a través de varios métodos de comunicación al mismo tiempo, como SMS, notificaciones push a móviles, correo electrónico, llamadas de voz, redes sociales, radio, televisión, sirenas y sistemas de megafonía."
+    },
+    "genasysProtectCommunicationZones": {
+      "title": "Genasys Protect - Zonas de Comunicación",
+      "description": "Un sistema de gestión de emergencias y comunicación basado en ubicación que ayuda a las autoridades a organizar, monitorear y comunicarse con las personas usando zonas geográficas predefinidas en lugar de alertas generales a toda la ciudad. La idea es dividir comunidades, campus o áreas operacionales en \"zonas de comunicación\" inteligentes para que los responders puedan enviar actualizaciones muy específicas durante emergencias u operaciones diarias."
     }
   },
   "technologies": {
