@@ -8,8 +8,10 @@ import { Link } from './ui/Link';
 import cleanCodeBook from '../assets/img/clean-code-book.jpg';
 import zeroToProductionInRustBook from '../assets/img/zero-to-production-in-rust-book.jpg';
 import refactoringUIBook from '../assets/img/refactoring-ui.jpg';
+import programmingWithTypesBook from '../assets/img/programming-with-types.jpg';
 import sumergetePatronesDiseñoBook from '../assets/img/sumergete-patrones-diseño.png';
 import programmingRust2EditionBook from '../assets/img/programming-rust-2-edition-book.png';
+import codigoSostenible from '../assets/img/codigo-sostenible.jpg';
 import { Modal } from '@mui/material';
 import { PRIMARY_COLORS } from '../colors';
 
@@ -78,6 +80,12 @@ export const Resources = () => {
           </Book>
           <Book onClick={() => onBookClick(programmingRust2EditionBook)}>
             <BookImage src={programmingRust2EditionBook} />
+          </Book>
+          <Book onClick={() => onBookClick(programmingWithTypesBook)}>
+            <BookImage src={programmingWithTypesBook} />
+          </Book>
+          <Book onClick={() => onBookClick(codigoSostenible)}>
+            <BookImage src={codigoSostenible} />
           </Book>
         </BooksContainer>
         <Modal
