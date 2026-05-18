@@ -3,6 +3,5 @@ export enum PageState {
   Contact,
   Projects,
   Technologies,
-  Tools
+  Tools,
 }
-

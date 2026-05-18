@@ -1,6 +1,6 @@
-import { styled } from '@mui/system'
-import MenuIcon from '@mui/icons-material/Menu'
-import CloseIcon from '@mui/icons-material/Close'
+import { styled } from '@mui/system';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import {
   AppBar,
   Drawer,
@@ -10,11 +10,14 @@ import {
   ListItemButton,
   ListItem,
   List,
-} from '@mui/material'
+  Box,
+} from '@mui/material';
 
-import { PRIMARY_COLORS } from '../../colors'
-import { PageState } from '../types'
-import { MenuButton } from './MenuButton'
+import { PRIMARY_COLORS } from '../../colors';
+import { PageState } from '../types';
+import { MenuButton } from './MenuButton';
+import { LanguageToggleButton } from './LanguageButton';
+import { useTranslation } from 'react-i18next';
 
 const NavBar = styled('div')({
   display: 'flex',
@@ -24,30 +27,40 @@ const NavBar = styled('div')({
   fontFamily: 'GeistMonoBold',
   backgroundColor: PRIMARY_COLORS.section,
   '@media(max-width:790px)': {
-    display: 'none'
-  }
+    display: 'none',
+  },
+});
 
-})
-
-const mobileNavbar = new Map([
-  ['Sobre mí', PageState.Biography],
-  ['Tecnologías', PageState.Technologies],
-  ['Proyectos', PageState.Projects],
-  ['Herramientas', PageState.Tools],
-])
+const mobileNavbar = [
+  { key: 'nav.about', pageState: PageState.Biography },
+  { key: 'nav.technologies', pageState: PageState.Technologies },
+  { key: 'nav.projects', pageState: PageState.Projects },
+  { key: 'nav.tools', pageState: PageState.Tools },
+];
 
 interface Props {
-  onChangePageState: (state: PageState) => void
-  onSetIsDrawerOpen: (value: boolean) => void
-  isDrawerOpen: boolean
-  pageState: PageState
+  onChangePageState: (state: PageState) => void;
+  onSetIsDrawerOpen: (value: boolean) => void;
+  isDrawerOpen: boolean;
+  pageState: PageState;
 }
 
-export const HamburgerMenu = ({ onChangePageState, pageState, onSetIsDrawerOpen, isDrawerOpen }: Props) => {
+export const HamburgerMenu = ({
+  onChangePageState,
+  pageState,
+  onSetIsDrawerOpen,
+  isDrawerOpen,
+}: Props) => {
+  const { t } = useTranslation();
 
   return (
     <AppBar position={'static'}>
-      <Toolbar sx={{ backgroundColor: PRIMARY_COLORS.section }}>
+      <Toolbar
+        sx={{
+          backgroundColor: PRIMARY_COLORS.section,
+          justifyContent: 'space-between',
+        }}
+      >
         <IconButton
           sx={{
             '&.MuiIconButton-root': {
@@ -55,68 +68,90 @@ export const HamburgerMenu = ({ onChangePageState, pageState, onSetIsDrawerOpen,
               marginRight: '2rem',
               color: PRIMARY_COLORS.pageBackground,
               '@media(max-width:790px)': {
-                display: 'block !important'
-              }
+                display: 'block !important',
+              },
             },
             '&.MuiIconButton-root:focus': {
-              outline: '0px auto -webkit-focus-ring-color'
-            }
+              outline: '0px auto -webkit-focus-ring-color',
+            },
           }}
           edge={'start'}
-          onClick={() => onSetIsDrawerOpen(true)}>
+          onClick={() => onSetIsDrawerOpen(true)}
+        >
           <MenuIcon />
         </IconButton>
+        <Box
+          sx={{
+            marginLeft: 'auto',
+            display: { xs: 'block', md: 'none' },
+          }}
+        >
+          <LanguageToggleButton />
+        </Box>
         <NavBar>
           <MenuButton
             isSelected={pageState === PageState.Biography}
             onClick={() => onChangePageState(PageState.Biography)}
-            text={'Sobre mí'} />
+            text={t('nav.about')}
+          />
           <MenuButton
             isSelected={pageState === PageState.Technologies}
             onClick={() => onChangePageState(PageState.Technologies)}
-            text={'Tecnologías'} />
+            text={t('nav.technologies')}
+          />
           <MenuButton
             isSelected={pageState === PageState.Projects}
             onClick={() => onChangePageState(PageState.Projects)}
-            text={'Proyectos'} />
+            text={t('nav.projects')}
+          />
           <MenuButton
             isSelected={pageState === PageState.Tools}
             onClick={() => onChangePageState(PageState.Tools)}
-            text={'Herramientas'} />
+            text={t('nav.tools')}
+          />
+          <LanguageToggleButton />
         </NavBar>
         <Drawer
           anchor={'right'}
           variant={'temporary'}
           open={isDrawerOpen}
-          onClose={() => onSetIsDrawerOpen(false)}>
-          <List sx={{
-            backgroundColor: PRIMARY_COLORS.pageBackground,
-            color: PRIMARY_COLORS.section,
-            minHeight: '100%',
-            '&.MuiList-root': {
-              padding: '0px'
-            }
-          }}>
-            <IconButton sx={{
-              '&.MuiIconButton-root': {
-                float: 'right'
+          onClose={() => onSetIsDrawerOpen(false)}
+        >
+          <List
+            sx={{
+              backgroundColor: PRIMARY_COLORS.pageBackground,
+              color: PRIMARY_COLORS.section,
+              minHeight: '100%',
+              '&.MuiList-root': {
+                padding: '0px',
               },
-              '&.MuiIconButton-root:focus': {
-                outline: '0px'
-              }
-            }} onClick={() => onSetIsDrawerOpen(false)}>
+            }}
+          >
+            <IconButton
+              sx={{
+                '&.MuiIconButton-root': {
+                  float: 'right',
+                },
+                '&.MuiIconButton-root:focus': {
+                  outline: '0px',
+                },
+              }}
+              onClick={() => onSetIsDrawerOpen(false)}
+            >
               <CloseIcon />
             </IconButton>
-            {Array.from(mobileNavbar).map(([text, state]) => (
-              <ListItem key={text} disablePadding onClick={() => onChangePageState(state)}>
+            {mobileNavbar.map((item) => (
+              <ListItem key={item.key} disablePadding onClick={() => onChangePageState(item.pageState)}>
                 <ListItemButton>
-                  <ListItemText sx={{
-                    '& > span.MuiTypography-root': {
-                      fontFamily: state === pageState ? 'GeistMonoBold' : 'GeistMonoSemiBold'
-                    },
-                    textDecoration: state === pageState ? 'underline' : 'none'
-                  }}
-                    primary={text} />
+                  <ListItemText
+                    sx={{
+                      '& > span.MuiTypography-root': {
+                        fontFamily: item.pageState === pageState ? 'GeistMonoBold' : 'GeistMonoSemiBold',
+                      },
+                      textDecoration: item.pageState === pageState ? 'underline' : 'none',
+                    }}
+                    primary={t(item.key)}
+                  />
                 </ListItemButton>
               </ListItem>
             ))}
@@ -124,5 +159,5 @@ export const HamburgerMenu = ({ onChangePageState, pageState, onSetIsDrawerOpen,
         </Drawer>
       </Toolbar>
     </AppBar>
-  )
-}
+  );
+};

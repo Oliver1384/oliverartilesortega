@@ -1,12 +1,12 @@
-import { ReactNode } from 'react'
-import { PRIMARY_COLORS, TEXT_COLORS } from '../../colors'
-import { styled } from '@mui/system'
-import { Title } from './Title'
+import { ReactNode } from 'react';
+import { PRIMARY_COLORS, TEXT_COLORS } from '../../colors';
+import { styled } from '@mui/system';
+import { Title } from './Title';
 
 interface ArticleProps {
-  children: ReactNode
-  image?: string
-  title: string
+  children: ReactNode;
+  image?: string;
+  title: string;
 }
 
 const ArticleStyled = styled('article')({
@@ -18,8 +18,8 @@ const ArticleStyled = styled('article')({
   borderRadius: '5px',
   '@media(min-width:500px)': {
     margin: '1rem',
-  }
-})
+  },
+});
 
 const Image = styled('img')({
   maxWidth: '85px',
@@ -37,41 +37,42 @@ const Image = styled('img')({
     display: 'column',
     width: 'auto',
     height: 'auto',
-  }
-})
+  },
+});
 
 const ArticleHeader = styled('div')({
   '@media(min-width: 500px)': {
     display: 'flex',
     flexDirection: 'column-reverse',
-    float: 'left'
+    float: 'left',
   },
-})
+});
 
 const ArticleBody = styled('div')({
   '@media(min-width: 500px)': {
-    marginTop: '40px'
-  }
-})
+    marginTop: '40px',
+  },
+});
 
 export const Article = ({ children, image, title }: ArticleProps) => {
-
   return (
     <ArticleStyled>
       <ArticleHeader>
-        {
-          image && <Image src={image} alt={'Logo de rust'} />
-        }
-        <Title sx={{
-          '@media(min-width:500px)': {
-            margin: '0',
-            marginBottom: '0.8rem',
-            maxWidth: '50px',
-            textWrap: 'nowrap'
-          }
-        }}>{title}</Title>
+        {image && <Image src={image} alt={'Logo de rust'} />}
+        <Title
+          sx={{
+            '@media(min-width:500px)': {
+              margin: '0',
+              marginBottom: '0.8rem',
+              maxWidth: '50px',
+              textWrap: 'nowrap',
+            },
+          }}
+        >
+          {title}
+        </Title>
       </ArticleHeader>
       <ArticleBody>{children}</ArticleBody>
     </ArticleStyled>
-  )
-}
+  );
+};

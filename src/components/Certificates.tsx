@@ -1,40 +1,43 @@
-import { Link } from './ui/Link.tsx'
-import { Article } from './ui/Article.tsx'
+import { useTranslation } from 'react-i18next';
+import { Link } from './ui/Link.tsx';
+import { Article } from './ui/Article.tsx';
 
 export const Certificates = () => {
+  const { t } = useTranslation();
+
   return (
-    <Article title={'Certificados obtenidos'}>
+    <Article title={t('certificates.title')}>
       <Link href={'certificates/redux-saga-react.pdf'} target={'_blank'}>
-        Redux Saga with React
+        {t('certificates.reduxSagaReact')}
       </Link>
       <br />
       <Link href={'certificates/asincrona-promesas-javascript.pdf'} target={'_blank'}>
-        Programación asíncrona con promises en Javascript
+        {t('certificates.asyncJavascript')}
       </Link>
       <br />
       <Link href={'certificates/clean-code.pdf'} target={'_blank'}>
-        Clean code
+        {t('certificates.cleanCode')}
       </Link>
       <br />
       <Link href={'certificates/javascript-avanzado.pdf'} target={'_blank'}>
-        Javascript avanzado
+        {t('certificates.advancedJavascript')}
       </Link>
       <br />
       <Link href={'certificates/manipulacion-DOM-javascript.pdf'} target={'_blank'}>
-        Manipulación del DOM desde Javascript
+        {t('certificates.domManipulation')}
       </Link>
       <br />
       <Link href={'certificates/metodologias-agiles.pdf'} target={'_blank'}>
-        Metodologías ágiles
+        {t('certificates.agileMethodologies')}
       </Link>
       <br />
       <Link href={'certificates/agile-uml.pdf'} target={'_blank'}>
-        Agile UML
+        {t('certificates.agileUml')}
       </Link>
       <br />
       <Link href={'certificates/SCRUM.pdf'} target={'_blank'}>
-        SCRUM
+        {t('certificates.scrum')}
       </Link>
     </Article>
-  )
-}
+  );
+};
