@@ -78,7 +78,7 @@
       "description": "Me preocupo por el uso adecuado de las diferentes etiquetas para estructurar la página, ya que facilita luego trabajar sobre esta y que las aplicaciones para la accesibilidad puedan interpretar la página de manera adecuada. Además, los motores de búsqueda posicionan mejor la web cuando contienen una estructura que sigue los estándares web."
     },
     "typescript": {
-      "title": "Typescript",
+      "title": "TypeScript",
       "description": "En la mayoría de los proyectos de front-end programo en Typscript, tengo una amplia experiencia en este lenguaje, conociendo conceptos más avanzados como los 'Union and intersection types', 'Conditional types', 'Mapped types', etc."
     },
     "javascript": {

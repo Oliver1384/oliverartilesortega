@@ -78,7 +78,7 @@
       "description": "I care about the proper use of different tags to structure the page, as it facilitates working on it later and allows accessibility applications to interpret the page properly. Additionally, search engines better position the website when it contains a structure that follows web standards."
     },
     "typescript": {
-      "title": "Typescript",
+      "title": "TypeScript",
       "description": "In most front-end projects I program in TypeScript. I have extensive experience with this language, knowing more advanced concepts like 'Union and intersection types', 'Conditional types', 'Mapped types', etc."
     },
     "javascript": {
