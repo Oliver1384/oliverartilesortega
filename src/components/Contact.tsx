@@ -33,7 +33,21 @@ const DownloadCVButton = styled('button')({
   '&:active > img': {
     filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)',
   },
+  '@keyframes bounce': {
+    '100%': {
+      transform: 'translateY(0)',
+    },
+    '50%': {
+      transform: 'translateY(-5px)',
+    }
+  },
+  animation: 'bounce 1s infinite',
+  '&:hover': {
+    animation: 'none'
+  }
 });
+
+
 
 const DownloadIcon = styled('img')({
   width: '25px',

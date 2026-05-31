@@ -21,6 +21,7 @@ export const MenuButton = ({ text, onClick, isSelected }: MenuButtonProps) => {
           color: isSelected ? PRIMARY_COLORS.section : 'white',
         },
         fontFamily: 'GeistMonoSemiBold',
+        transition: 'background-color 0.3s, color 0.3s',
       }}
       onClick={onClick}
     >
