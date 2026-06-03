@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { PRIMARY_COLORS } from './colors';
 import { Biography } from './components/Biography';
 import { HamburgerMenu } from './components/ui/HamburgerMenu';
-import { ScrollToTopButton } from './components/ui/ScrollToTop';
+import { ScrollToTopButton } from './components/ui/ScrollToTopButton';
 import { Projects } from './components/Projects';
 import { Technologies } from './components/Technologies';
 import { Tools } from './components/Tools';
