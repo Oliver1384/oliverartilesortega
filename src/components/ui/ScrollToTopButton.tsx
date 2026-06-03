@@ -5,9 +5,10 @@ import { PRIMARY_COLORS } from '../../colors';
 
 const ScrollButton = styled('div')<{ isVisible: boolean }>(({ isVisible }) => ({
   position: 'fixed',
-  bottom: '2rem',
-  right: '2rem',
-  backgroundColor: PRIMARY_COLORS.section,
+  bottom: '20px',
+  left: '50%',
+  transform: 'translateX(-50%)',
+  backgroundColor: PRIMARY_COLORS.pageBackground,
   color: '#ffffff',
   width: '48px',
   height: '48px',
@@ -45,7 +46,7 @@ export const ScrollToTopButton = () => {
 
   return (
     <ScrollButton isVisible={isVisible} onClick={scrollToTop}>
-      <KeyboardArrowUpIcon />
+      <KeyboardArrowUpIcon color={'action'}/>
     </ScrollButton>
   );
 };
