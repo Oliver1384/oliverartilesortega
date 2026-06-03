@@ -6,4 +6,5 @@ export const Link = styled('a')({
   '&:hover': {
     color: '#d8f1eb',
   },
+  transition: 'color 0.3s ease',
 });

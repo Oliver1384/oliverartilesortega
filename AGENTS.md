@@ -54,16 +54,20 @@ src/
     └── img/              # Book covers
 ```
 
+## Package Manager
+
+Use **pnpm** (not npm) for all package management commands.
+
 ## Available Scripts
 
-| Command            | Description               |
-| ------------------ | ------------------------- |
-| `npm start`        | Start development server  |
-| `npm run build`    | Build for production      |
-| `npm run preview`  | Preview production build  |
-| `npm run lint`     | Run ESLint                |
-| `npm run lint:fix` | Auto-fix linting issues   |
-| `npm run format`   | Format code with Prettier |
+| Command             | Description               |
+| ------------------- | ------------------------- |
+| `pnpm start`        | Start development server  |
+| `pnpm run build`    | Build for production      |
+| `pnpm run preview`  | Preview production build  |
+| `pnpm run lint`     | Run ESLint                |
+| `pnpm run lint:fix` | Auto-fix linting issues   |
+| `pnpm run format`   | Format code with Prettier |
 
 ## Key Dependencies
 

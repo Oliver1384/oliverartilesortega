@@ -6,6 +6,10 @@ const TechnologieIconStyle = styled('img')({
   maxHeight: '35px',
   marginRight: '10px',
   marginLeft: '10px',
+  transition: 'transform 0.5s ease',
+  '&:hover': {
+    transform: 'scale(1.3)',
+  }
 });
 
 interface TechnologieIconProps {
