@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { PRIMARY_COLORS } from './colors';
 import { Biography } from './components/Biography';
 import { HamburgerMenu } from './components/ui/HamburgerMenu';
+import { ScrollToTopButton } from './components/ui/ScrollToTop';
 import { Projects } from './components/Projects';
 import { Technologies } from './components/Technologies';
 import { Tools } from './components/Tools';
@@ -53,6 +54,7 @@ export const App = () => {
         {pageState === PageState.Technologies && <Technologies />}
         {pageState === PageState.Tools && <Tools />}
       </Page>
+      <ScrollToTopButton />
     </>
   );
 };
