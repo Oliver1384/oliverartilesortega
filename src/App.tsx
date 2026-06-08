@@ -1,5 +1,5 @@
 import { styled } from '@mui/system';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { PRIMARY_COLORS } from './colors';
 import { Biography } from './components/Biography';
@@ -14,6 +14,7 @@ const Page = styled('body')({
   display: 'flex',
   justifyContent: 'center',
   width: '1240px',
+  marginTop: '50px',
   backgroundColor: PRIMARY_COLORS.pageBackground,
   '@media(max-width:1240px)': {
     width: '100vw',
@@ -22,11 +23,14 @@ const Page = styled('body')({
 
 const Header = styled('header')({
   display: 'flex',
+  position: 'fixed',
   justifyContent: 'center',
   width: '100%',
+  maxWidth: '1240px',
   '@media(max-width:1240px)': {
     width: '100vw',
   },
+  marginBottom: '200px',
 });
 
 export const App = () => {
@@ -37,6 +41,10 @@ export const App = () => {
     setIsDrawerOpen(false);
     setPageState(state);
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pageState]);
 
   return (
     <>
