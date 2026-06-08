@@ -1,5 +1,5 @@
 import { styled } from '@mui/system';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { PRIMARY_COLORS } from './colors';
 import { Biography } from './components/Biography';
@@ -41,6 +41,10 @@ export const App = () => {
     setIsDrawerOpen(false);
     setPageState(state);
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pageState]);
 
   return (
     <>
