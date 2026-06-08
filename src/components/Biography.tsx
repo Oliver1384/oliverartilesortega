@@ -25,7 +25,7 @@ export const Biography = () => {
   return (
     <Section>
       <Article title={t('biography.title')}>
-        <ProfileImage src={'../profile.jpg'} />
+        <ProfileImage src={'/profile.jpg'} />
         <SecondaryTitle>{t('biography.subtitle')}</SecondaryTitle>
         <p>{t('biography.p1')}</p>
         <p>{t('biography.p2')}</p>
